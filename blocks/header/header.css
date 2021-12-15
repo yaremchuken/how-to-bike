@@ -1,2 +1,9 @@
 .header {
+  margin: 0;
+  padding: 0 120px 0;
+  height: 74px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 34px;
 }

@@ -1,0 +1,10 @@
+.surface__control_next::after {
+  padding: 0;
+  margin: 0 auto;
+  content: '';
+  height: 18px;
+  width: 10px;
+  align-self: center;
+  justify-self: center;
+  background-image: url(../../../../images/surface/gallery-control_next.svg);
+}

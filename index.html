@@ -3,21 +3,102 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Место.Россия</title>
+    <title>How to bike</title>
     <link rel="stylesheet" href="styles/index.css" />
   </head>
   <body class="body">
     <div class="page">
-      <header class="header"></header>
+      <header class="header">
+        <a href="" class="header__link">Покрытия и градиенты</a>
+        <a href="" class="header__link">Велосипеды</a>
+        <a href="" class="header__link">Тренировки</a>
+      </header>
 
       <main class="content">
-        <section class="legend"></section>
+        <section class="legend">
+          <h2 class="legend__title">Шоссе, ТТ и&nbsp;Грэвел</h2>
+          <p class="legend__description">
+            Триатлонные старты, горные серпантины или грейвел заезды по живописным маршрутам – нужно только определиться с выбором
+            велосипеда и отправиться в путь.
+          </p>
+          <button class="legend__btn-detail">Подробнее</button>
+          <p class="legend__vendor-sign">Cannondale Systemsix <span class="legend__vendor-sign_line"></span></p>
+          <img class="legend__image" src="./images/legend.png" alt="Проезд по грунтовой дороге сквозь лес в сторону гор" />
+        </section>
 
-        <section class="opinion"></section>
+        <section class="proposition">
+          <img class="proposition__image" src="./images/proposition.png" alt="Одинокий велосипедист в сельском пейзаже" />
+          <div class="proposition__quote">
+            <p class="proposition__saying">«Катайся много или мало, долго или коротко, как хочешь - но катайся»</p>
 
-        <section class="about-ride"></section>
+            <div class="proposition__author">
+              <p class="proposition__author_name">Эдди Меркс</p>
+              <p class="proposition__author_occupation">Велогонщик</p>
+            </div>
+          </div>
+        </section>
 
-        <section class="bycicle-display"></section>
+        <section class="surface">
+          <h2 class="surface__title">Шоссе</h2>
+          <p class="surface__description">
+            На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном
+            пелотоне, но тренироваться можно и самостоятельно.
+          </p>
+          <div class="surface__gallery">
+            <img src="./images/surface/surface_highway_1.png" alt="Шоссе уходящее в закат" class="surface__gallery_img-main" />
+            <img src="./images/surface/surface_dirt_1.png" alt="Грунтовая дорога через лес" class="surface__gallery_img-secondary" />
+            <div class="surface__gallery_pulse"></div>
+          </div>
+          <div class="surface__controls">
+            <button class="surface__control surface__control_previous"></button>
+            <button class="surface__control surface__control_next"></button>
+          </div>
+        </section>
+
+        <section class="bycicles">
+          <div class="bycicles__heading">
+            <h2 class="bycicles__title">Велосипеды</h2>
+            <ul class="bycicles__type-list">
+              <li class="bycicles__type bycicles__type_active">Шоссе</li>
+              <li class="bycicles__type">Грэвел</li>
+              <li class="bycicles__type">ТТ</li>
+            </ul>
+          </div>
+          <ul class="bycicles__displays">
+            <li>
+              <figure class="bycicles__display">
+                <img
+                  src="./images/bycicles/cervelo_caledonia_5.png"
+                  alt="Шоссейный велосипед Cervelo Caledonia-5"
+                  class="bycicles__display_img"
+                />
+                <figcaption class="bycicles__display_caption">Cervelo Caledonia-5</figcaption>
+              </figure>
+            </li>
+
+            <li>
+              <figure class="bycicles__display">
+                <img
+                  src="./images/bycicles/cannondale_systemsix_himod.png"
+                  alt="Шоссейный велосипед Cannondale Systemsix Himod"
+                  class="bycicles__display_img"
+                />
+                <figcaption class="bycicles__display_caption">Cannondale Systemsix Himod</figcaption>
+              </figure>
+            </li>
+
+            <li>
+              <figure class="bycicles__display">
+                <img
+                  src="./images/bycicles/trek_domane_sl-7.png"
+                  alt="Шоссейный велосипед Trek Domane SL-7"
+                  class="bycicles__display_img"
+                />
+                <figcaption class="bycicles__display_caption">Trek Domane SL-7</figcaption>
+              </figure>
+            </li>
+          </ul>
+        </section>
 
         <section class="trainig"></section>
       </main>
