@@ -1,0 +1,21 @@
+.surface__gallery_pulse {
+  padding: 0;
+  margin: 0;
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  display: flex;
+  bottom: 16px;
+  background-image: url(../../../../images/surface/gallery-pulse.svg);
+  background-repeat: no-repeat;
+  align-items: center;
+}
+
+.surface__gallery_pulse::after {
+  padding: 0;
+  margin: 0 0 0 16px;
+  content: '';
+  width: 50px;
+  height: 16px;
+  background-image: url(../../../../images/surface/gallery-pulse_highway.svg);
+}

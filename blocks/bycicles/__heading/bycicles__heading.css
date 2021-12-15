@@ -1,0 +1,6 @@
+.bycicles__heading {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
