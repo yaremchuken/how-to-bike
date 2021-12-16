@@ -1,0 +1,7 @@
+.training__image {
+  padding: 0;
+  margin: 0;
+
+  grid-column: 2;
+  grid-row: 1 / span 3;
+}

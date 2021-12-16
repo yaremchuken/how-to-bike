@@ -1,15 +1,14 @@
-.header__link {
+.training__link {
   padding: 0;
   margin: 0;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
   color: #151515;
   text-decoration: none;
-  cursor: pointer;
   transition: opacity ease-in-out 0.3s;
 }
 
-.header__link:hover {
+.training__link:hover {
   opacity: 0.75;
 }

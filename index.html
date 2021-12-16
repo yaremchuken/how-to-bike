@@ -6,24 +6,51 @@
     <title>How to bike</title>
     <link rel="stylesheet" href="styles/index.css" />
   </head>
+
   <body class="body">
     <div class="page">
+
+      <div class="overlay">
+        <img class="overlay__content" src="./images/overlay.png" alt="Велосипед Cannondale Systemsix Himod"></img>
+      </div>
+
       <header class="header">
-        <a href="" class="header__link">Покрытия и градиенты</a>
-        <a href="" class="header__link">Велосипеды</a>
-        <a href="" class="header__link">Тренировки</a>
+        <nav class="header__nav-bar">
+          <ul class="header__links">
+            <li onclick="document.querySelector('#surface').scrollIntoView({ behavior: 'smooth' });" class="header__link">
+              Покрытия и градиенты
+            </li>
+            <li onclick="document.querySelector('#bycicles').scrollIntoView({ behavior: 'smooth' });" class="header__link">
+              Велосипеды
+            </li>
+            <li onclick="document.querySelector('#training').scrollIntoView({ behavior: 'smooth' });" class="header__link">
+              Тренировки
+            </li>
+          </ul>
+        </nav>
       </header>
+
+      <template id="card-template">
+        <li class="card">
+          <img class="card__image" />
+          <button type="button" class="card__btn-remove"></button>
+          <div class="card__label">
+            <p class="card__title"></p>
+            <button type="button" class="card__btn-like"></button>
+          </div>
+        </li>
+      </template>
 
       <main class="content">
         <section class="legend">
           <h2 class="legend__title">Шоссе, ТТ и&nbsp;Грэвел</h2>
+          <img class="legend__image" src="./images/legend.png" alt="Проезд по грунтовой дороге сквозь лес в сторону гор" />
           <p class="legend__description">
             Триатлонные старты, горные серпантины или грейвел заезды по живописным маршрутам – нужно только определиться с выбором
             велосипеда и отправиться в путь.
           </p>
           <button class="legend__btn-detail">Подробнее</button>
           <p class="legend__vendor-sign">Cannondale Systemsix <span class="legend__vendor-sign_line"></span></p>
-          <img class="legend__image" src="./images/legend.png" alt="Проезд по грунтовой дороге сквозь лес в сторону гор" />
         </section>
 
         <section class="proposition">
@@ -38,7 +65,7 @@
           </div>
         </section>
 
-        <section class="surface">
+        <section class="surface" id="surface">
           <h2 class="surface__title">Шоссе</h2>
           <p class="surface__description">
             На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном
@@ -47,7 +74,7 @@
           <div class="surface__gallery">
             <img src="./images/surface/surface_highway_1.png" alt="Шоссе уходящее в закат" class="surface__gallery_img-main" />
             <img src="./images/surface/surface_dirt_1.png" alt="Грунтовая дорога через лес" class="surface__gallery_img-secondary" />
-            <div class="surface__gallery_pulse"></div>
+            <div class="surface__gallery_pulse"><span class="surface__gallery_pulse-line_highway"></span></div>
           </div>
           <div class="surface__controls">
             <button class="surface__control surface__control_previous"></button>
@@ -55,7 +82,7 @@
           </div>
         </section>
 
-        <section class="bycicles">
+        <section class="bycicles" id="bycicles">
           <div class="bycicles__heading">
             <h2 class="bycicles__title">Велосипеды</h2>
             <ul class="bycicles__type-list">
@@ -100,10 +127,37 @@
           </ul>
         </section>
 
-        <section class="trainig"></section>
+        <section class="training" id="training">
+          <h2 class="training__title">Тренировки</h2>
+          <img src="./images/training.png" alt="Асфальтированная дорога между деревьев" class="training__image" />
+          <p class="training__description">
+            Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а записать эти тренировки поможет приложение Strava, а
+            также это приложение позволит построить тренировочный план.
+          </p>
+          <ul class="training__links">
+            <li><a href="https://www.strava.com" class="training__link">Strava</a></li>
+            <li><a href="https://www.komoot.com" class="training__link">Komoot</a></li>
+          </ul>
+        </section>
       </main>
 
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="footer__container">
+          <p class="footer__subscribe">Подпишитесь на<br />рассылку —</p>
+          <form action="" class="footer__form">
+            <fieldset class="footer__form_fieldset">
+              <input type="email" class="footer__form_email" placeholder="Ваш e-mail" />
+              <button type="submit" class="footer__form_submit">ok</button>
+            </fieldset>
+          </form>
+          <p class="footer__copyright">&copy; Road Club 2021</p>
+          <div class="footer__theme-picker">
+            <div class="footer__icon_light"></div>
+            <button class="footer__theme-switch footer__theme-switch_ligth"></button>
+            <div class="footer__icon_dark"></div>
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="./scripts/script.js"></script>
   </body>

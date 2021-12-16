@@ -10,12 +10,3 @@
   background-repeat: no-repeat;
   align-items: center;
 }
-
-.surface__gallery_pulse::after {
-  padding: 0;
-  margin: 0 0 0 16px;
-  content: '';
-  width: 50px;
-  height: 16px;
-  background-image: url(../../../../images/surface/gallery-pulse_highway.svg);
-}

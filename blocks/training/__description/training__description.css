@@ -1,12 +1,11 @@
-.bycicles__type {
+.training__description {
   padding: 0;
   margin: 0;
   font-size: 18px;
   line-height: 28px;
   color: #222;
   opacity: 0.7;
-}
 
-.bycicles__type:hover {
-  opacity: 0.6;
+  grid-column: 1;
+  grid-row: 2;
 }

@@ -1,11 +1,14 @@
-@import url(../vendor/normalize.css);
+/* @import url(../vendor/normalize.css); */
 @import url(../vendor/fonts/fonts.css);
 
 @import url(../blocks/body/body.css);
 @import url(../blocks/page/page.css);
+@import url(../blocks/content/content.css);
 
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__link/header__link.css);
+@import url(../blocks/header/__links/header__links.css);
+@import url(../blocks/header/__nav-bar/header__nav-bar.css);
 
 @import url(../blocks/legend/legend.css);
 @import url(../blocks/legend/__btn-detail/legend__btn-detail.css);
@@ -33,6 +36,9 @@
 @import url(../blocks/surface/__gallery/_img-main/surface__gallery_img-main.css);
 @import url(../blocks/surface/__gallery/_img-secondary/surface__gallery_img-secondary.css);
 @import url(../blocks/surface/__gallery/_pulse/surface__gallery_pulse.css);
+@import url(../blocks/surface/__gallery/_pulse-line/surface__gallery_pulse-line_dirt.css);
+@import url(../blocks/surface/__gallery/_pulse-line/surface__gallery_pulse-line_highway.css);
+@import url(../blocks/surface/__gallery/_pulse-line/surface__gallery_pulse-line_tt.css);
 @import url(../blocks/surface/__title/surface__title.css);
 
 @import url(../blocks/bycicles/bycicles.css);
@@ -46,4 +52,27 @@
 @import url(../blocks/bycicles/__type/bycicles__type.css);
 @import url(../blocks/bycicles/__type/_active/bycicles__type_active.css);
 
+@import url(../blocks/training/training.css);
+@import url(../blocks/training/__description/training__description.css);
+@import url(../blocks/training/__image/training__image.css);
+@import url(../blocks/training/__link/training__link.css);
+@import url(../blocks/training/__links/training__links.css);
+@import url(../blocks/training/__title/training__title.css);
+
 @import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__container/footer__container.css);
+@import url(../blocks/footer/__copyright/footer__copyright.css);
+@import url(../blocks/footer/__form/footer__form.css);
+@import url(../blocks/footer/__form/_submit/footer__form_submit.css);
+@import url(../blocks/footer/__form/_email/footer__form_email.css);
+@import url(../blocks/footer/__form/_fieldset/footer__form_fieldset.css);
+@import url(../blocks/footer/__icon/_dark/footer__icon_dark.css);
+@import url(../blocks/footer/__icon/_light/footer__icon_light.css);
+@import url(../blocks/footer/__subscribe/footer__subscribe.css);
+@import url(../blocks/footer/__theme-picker/footer__theme-picker.css);
+@import url(../blocks/footer/__theme-switch/footer__theme-switch.css);
+@import url(../blocks/footer/__theme-switch/_ligth/footer__theme-switch_ligth.css);
+@import url(../blocks/footer/__theme-switch/_dark/footer__theme-switch_dark.css);
+
+@import url(../blocks/overlay/overlay.css);
+@import url(../blocks/overlay/__content/overlay__contant.css);
