@@ -1,9 +1,9 @@
 .header {
-  margin: 0;
-  padding: 0 120px 0;
+  padding: 0;
+  margin: 0 auto;
   height: 74px;
+  max-width: 1440px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 34px;
 }

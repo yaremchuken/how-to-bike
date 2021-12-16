@@ -9,4 +9,10 @@
   border: none;
   outline: none;
   background-color: transparent;
+  transition: opacity ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.surface__control:hover {
+  opacity: 0.6;
 }

@@ -1,0 +1,9 @@
+.footer__theme-picker {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  right: 114px;
+  bottom: 68px;
+  display: flex;
+  gap: 22px;
+}

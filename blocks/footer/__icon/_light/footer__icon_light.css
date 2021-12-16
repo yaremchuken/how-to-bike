@@ -1,0 +1,8 @@
+.footer__icon_light {
+  padding: 0;
+  margin: 0;
+  width: 28px;
+  height: 28px;
+  background-image: url(../../../../images/theme_light.svg);
+  background-repeat: no-repeat;
+}
