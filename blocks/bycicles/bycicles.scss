@@ -55,9 +55,10 @@
   }
 
   &__type-select {
-    padding: 8px 0 8px 12px;
-    margin: 0;
+    padding: 5px 0 8px 7px;
+    margin: 40px 0 17px 0;
     width: 114px;
+    height: 30px;
     display: none;
     font-weight: 600;
     font-size: 11px;
@@ -118,7 +119,7 @@
 
   &__switches {
     padding: 0;
-    margin: 0;
+    margin: 20px 0 0;
     display: flex;
     list-style-type: none;
     gap: 5px;
@@ -144,7 +145,7 @@
   .bycicles {
     padding: 0 0 80px 0;
     margin: 0 18px;
-    gap: 40px;
+    gap: 0;
     border-top: 1px solid #e3e3e3;
 
     &__title {
@@ -162,12 +163,13 @@
     }
 
     &__display {
-      padding: 20px;
+      padding: 16px;
       background-color: #f4f4f4;
       box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.08);
       border-radius: 20px;
 
       &_img {
+        padding: 0;
         width: 254px;
         height: 254px;
         background-color: transparent;
