@@ -57,38 +57,29 @@
       bottom: 16px;
       background-image: url(../../images/surface/gallery-pulse.svg);
       background-repeat: no-repeat;
+      background-size: contain;
       align-items: center;
     }
 
     &_pulse-line {
+      padding: 0;
+      margin: 0 0 0 16px;
+      width: 50px;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+
       &_highway {
-        padding: 0;
-        margin: 0 0 0 16px;
-        width: 50px;
-        height: 100%;
         background-image: url(../../images/surface/gallery-pulse_highway.svg);
-        background-repeat: no-repeat;
-        background-position: center;
       }
 
       &_dirt {
-        padding: 0;
-        margin: 0 0 0 16px;
-        width: 50px;
-        height: 100%;
         background-image: url(../../images/surface/gallery-pulse_dirt.svg);
-        background-repeat: no-repeat;
-        background-position: center;
       }
 
       &_tt {
-        padding: 0;
-        margin: 0 0 0 16px;
-        width: 50px;
-        height: 100%;
         background-image: url(../../images/surface/gallery-pulse_tt.svg);
-        background-repeat: no-repeat;
-        background-position: center;
       }
     }
   }
@@ -147,7 +138,7 @@
 
 @media screen and (max-width: 1024px) {
   .surface {
-    padding: 0 0 80px 0;
+    padding: 0 0 50px 0;
     margin: 0 18px;
     display: flex;
     flex-direction: column;
@@ -155,7 +146,7 @@
     border-top: 1px solid #e3e3e3;
 
     &__title {
-      padding: 40px 0 0;
+      padding: 38px 0 0;
       font-size: 32px;
       line-height: 40px;
     }
@@ -172,6 +163,16 @@
 
       &_img-secondary {
         display: none;
+      }
+
+      &_pulse {
+        width: 70px;
+        height: 28px;
+      }
+
+      &_pulse-line {
+        margin: 0 0 0 10px;
+        width: 35px;
       }
     }
 
