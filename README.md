@@ -24,3 +24,5 @@
 - Оперирование данными форм через Javascript
 
 ## Github Pages <a name = "pages"></a>
+
+https://yaremchuken.github.io/how-to-bike/
