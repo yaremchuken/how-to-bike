@@ -36,3 +36,11 @@
     margin: 0;
   }
 }
+
+@media screen and (max-width: 780px) {
+  .header {
+    &__nav-bar {
+      display: none;
+    }
+  }
+}

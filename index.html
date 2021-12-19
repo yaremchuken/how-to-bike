@@ -62,15 +62,15 @@
 
         <section class="surface" id="surface">
           <h2 class="surface__title">Шоссе</h2>
-          <p class="surface__description">
-            На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном
-            пелотоне, но тренироваться можно и самостоятельно.
-          </p>
           <div class="surface__gallery">
             <img src="./images/surface/surface_highway_1.png" alt="Шоссе уходящее в закат" class="surface__gallery_img-main" />
             <img src="./images/surface/surface_dirt_1.png" alt="Грунтовая дорога через лес" class="surface__gallery_img-secondary" />
             <div class="surface__gallery_pulse"><span class="surface__gallery_pulse-line_highway"></span></div>
           </div>
+          <p class="surface__description">
+            На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном
+            пелотоне, но тренироваться можно и самостоятельно.
+          </p>
           <div class="surface__controls">
             <button class="surface__control surface__control_previous"></button>
             <button class="surface__control surface__control_next"></button>
@@ -86,7 +86,19 @@
               <li id="bycicles_tt" class="bycicles__type" onclick="switchBikes('tt');">ТТ</li>
             </ul>
           </div>
+          <select class="bycicles__type-select" onchange="switchBikesMobile();">
+            <option class="bycicles__option" selected value="highway">Шоссе</option>
+            <option class="bycicles__option" value="dirt">Грэвел</option>
+            <option class="bycicles__option" value="tt">ТТ</option>
+          </select>
           <ul class="bycicles__displays"></ul>
+
+          <!-- TODO: поменять чтобы количество переключалок зависело от количества картинок -->
+          <ul class="bycicles__switches">
+            <li class="bycicles__switcher bycicles__switcher_active" id="bycicle__switch_0" onclick="switchBikesMobile(0);"></li>
+            <li class="bycicles__switcher" id="bycicle__switch_1" onclick="switchBikesMobile(1);"></li>
+            <li class="bycicles__switcher" id="bycicle__switch_2" onclick="switchBikesMobile(2);"></li>
+          </ul>
         </section>
 
         <section class="training" id="training">
@@ -132,6 +144,7 @@
             <div class="footer__icon_moon"></div>
           </div>
         </div>
+        <div class="footer__logo"></div>
       </footer>
     </div>
     <script src="./scripts/script.js"></script>

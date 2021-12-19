@@ -67,6 +67,29 @@
   opacity: 1;
 }
 
+.bycicles__type-select {
+  padding: 8px 0 8px 12px;
+  margin: 0;
+  width: 114px;
+  display: none;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 14px;
+  background-color: transparent;
+  border: 1px solid #e3e3e3;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 2px;
+  outline: none;
+}
+
+.bycicles__option {
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 600;
+  color: #151515;
+}
+
 .bycicles__displays {
   padding: 0;
   margin: 0;
@@ -108,5 +131,76 @@
   font-size: 18px;
   line-height: 22px;
   text-decoration: none;
+}
+
+.bycicles__switches {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  gap: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bycicles__switcher {
+  padding: 0;
+  margin: 0;
+  width: 4px;
+  height: 4px;
+  background-color: #cacaca;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.bycicles__switcher_active {
+  background-color: #151515;
+}
+
+@media screen and (max-width: 1024px) {
+  .bycicles {
+    padding: 0 0 80px 0;
+    margin: 0 18px;
+    gap: 40px;
+    border-top: 1px solid #e3e3e3;
+  }
+  .bycicles__title {
+    padding: 40px 0 0;
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .bycicles__type-list {
+    display: none;
+  }
+  .bycicles__type-select {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .bycicles__display {
+    padding: 20px;
+    background-color: #f4f4f4;
+    -webkit-box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.08);
+            box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+  }
+  .bycicles__display_img {
+    width: 254px;
+    height: 254px;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border-radius: 0;
+  }
+  .bycicles__display_caption {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=bycicles.css.map */

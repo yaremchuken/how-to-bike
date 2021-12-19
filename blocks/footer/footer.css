@@ -3,8 +3,8 @@
   --theme-switch: white;
   --copyright: #cfcfcf;
   --control-brighness: 0;
-  --icon-sun: url(../../../../images/theme_sun_light.svg);
-  --icon-moon: url(../../../../images/theme_moon_light.svg);
+  --icon-sun: url(../../images/theme_sun_light.svg);
+  --icon-moon: url(../../images/theme_moon_light.svg);
   padding: 0;
   margin: 0;
   background-color: var(--background-color);
@@ -160,5 +160,44 @@
   height: 28px;
   background-image: var(--icon-moon);
   background-repeat: no-repeat;
+}
+
+.footer__logo {
+  padding: 0;
+  margin: 0;
+  display: none;
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  width: 38px;
+  height: 38px;
+  background-image: url(../../images/logo.png);
+}
+
+@media screen and (max-width: 1024px) {
+  .footer__container {
+    padding: 60px 0 25px 0;
+    margin: 0 18px;
+  }
+  .footer__form {
+    width: 100%;
+  }
+  .footer__form_container {
+    width: 100%;
+  }
+  .footer__form_fieldset {
+    width: 100%;
+  }
+  .footer__form_email {
+    width: 100%;
+  }
+  .footer__theme-picker {
+    display: none;
+  }
+  .footer__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 /*# sourceMappingURL=footer.css.map */

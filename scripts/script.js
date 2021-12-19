@@ -167,6 +167,21 @@ const switchBikes = (type) => {
   });
 };
 
+const switchBikesMobile = (idx = 0) => {
+  const type = document.querySelector('.bycicles__type-select').value;
+  const bikes = bikeTypes.filter((t) => t.type === type)[0];
+  byciclesDisplays.innerHTML = '';
+  insertBike(createBikeDisplay(bikes.sources[idx]));
+
+  document.querySelectorAll('.bycicles__switcher').forEach((s) => {
+    if (s.id === `bycicle__switch_${idx}`) {
+      s.classList.add('bycicles__switcher_active');
+    } else {
+      s.classList.remove('bycicles__switcher_active');
+    }
+  });
+};
+
 const createBikeDisplay = (bike) => {
   const bikeEl = bikeTemplate.cloneNode(true);
 
@@ -198,7 +213,11 @@ const insertBike = (bikeDisplay) => {
   byciclesDisplays.appendChild(bikeDisplay);
 };
 
-switchBikes('highway');
+if (window.innerWidth <= 1024) {
+  switchBikesMobile();
+} else {
+  switchBikes('highway');
+}
 
 /**
  * Переключение темы.
@@ -215,8 +234,8 @@ const themes = [
     controlBrightness: 0,
     copyright: '#cfcfcf',
     switcher: '#fff',
-    iconSun: 'url(../../../../images/theme_sun_light.svg)',
-    iconMoon: 'url(../../../../images/theme_moon_light.svg)',
+    iconSun: 'url(../../images/theme_sun_light.svg)',
+    iconMoon: 'url(../../images/theme_moon_light.svg)',
   },
   {
     type: 'dark',
@@ -228,8 +247,8 @@ const themes = [
     controlBrightness: 100,
     copyright: '#565656',
     switcher: '#545454',
-    iconSun: 'url(../../../../images/theme_sun_dark.svg)',
-    iconMoon: 'url(../../../../images/theme_moon_dark.svg)',
+    iconSun: 'url(../../images/theme_sun_dark.svg)',
+    iconMoon: 'url(../../images/theme_moon_dark.svg)',
   },
 ];
 

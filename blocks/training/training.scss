@@ -70,3 +70,30 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .training {
+    padding: 0 0 60px 0;
+    margin: 0 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border-top: 1px solid #e3e3e3;
+
+    &__title {
+      padding: 40px 0 0;
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    &__description {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &__link {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
