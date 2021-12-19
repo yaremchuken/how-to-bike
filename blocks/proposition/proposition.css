@@ -58,4 +58,36 @@
   padding: 0;
   margin: 0;
 }
+
+@media screen and (max-width: 1024px) {
+  .proposition {
+    padding: 0 0 80px 0;
+    margin: 0 18px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-top: 1px solid #e3e3e3;
+    gap: 40px;
+  }
+  .proposition__image {
+    padding: 20px 0 0;
+  }
+  .proposition__saying {
+    font-size: 23px;
+    line-height: 29px;
+  }
+  .proposition__quote {
+    gap: 40px;
+  }
+  .proposition__author_name {
+    padding: 0 0 4px 0;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .proposition__author_occupation {
+    font-size: 10px;
+    line-height: 16px;
+  }
+}
 /*# sourceMappingURL=proposition.css.map */

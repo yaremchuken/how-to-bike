@@ -1,9 +1,7 @@
 .overlay {
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
 
-  /* position: absolute; */
-  /* top: var(--pageY); */
   position: sticky;
   top: 347px;
   bottom: 79px;
@@ -11,16 +9,30 @@
   right: 0;
   height: 0;
   display: flex;
+  justify-content: center;
 
   z-index: 100;
 
   &__content {
-    padding: 20px;
-    margin: 0 auto;
+    padding: 20px 50px;
+    margin: 0 0 0 260px;
     width: 340px;
     height: 260px;
     background-color: #f4f4f4;
     box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.08);
     border-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .overlay {
+    justify-content: flex-start;
+
+    &__content {
+      padding: 10px 26px;
+      margin: 0 0 0 18px;
+      width: 180px;
+      height: 138px;
+    }
   }
 }

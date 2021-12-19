@@ -51,3 +51,39 @@
     margin: 0;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .proposition {
+    padding: 0 0 80px 0;
+    margin: 0 18px;
+    flex-direction: column;
+    border-top: 1px solid #e3e3e3;
+    gap: 40px;
+
+    &__image {
+      padding: 20px 0 0;
+    }
+
+    &__saying {
+      font-size: 23px;
+      line-height: 29px;
+    }
+
+    &__quote {
+      gap: 40px;
+    }
+
+    &__author {
+      &_name {
+        padding: 0 0 4px 0;
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      &_occupation {
+        font-size: 10px;
+        line-height: 16px;
+      }
+    }
+  }
+}
