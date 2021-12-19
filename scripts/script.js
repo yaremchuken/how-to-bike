@@ -209,15 +209,31 @@ const themes = [
     type: 'light',
     body: '#f4f4f4',
     font: '#151515',
+    fontSecondary: '#222',
     footer: '#efefef',
+    control: '#ebebeb',
+    controlBrightness: 0,
+    copyright: '#cfcfcf',
+    switcher: '#fff',
+    iconSun: 'url(../../../../images/theme_sun_light.svg)',
+    iconMoon: 'url(../../../../images/theme_moon_light.svg)',
   },
   {
     type: 'dark',
     body: '#333',
     font: '#fff',
+    fontSecondary: '#e5e5e5',
     footer: '#2f2f2f',
+    control: '#434343',
+    controlBrightness: 100,
+    copyright: '#565656',
+    switcher: '#545454',
+    iconSun: 'url(../../../../images/theme_sun_dark.svg)',
+    iconMoon: 'url(../../../../images/theme_moon_dark.svg)',
   },
 ];
+
+document.querySelector('.footer__theme-switch_plug').style.left = '2px';
 
 let isLightTheme = true;
 
@@ -230,6 +246,36 @@ const switchTheme = () => {
   bodyStyle.setProperty('--background-color', theme.body);
   bodyStyle.setProperty('--color', theme.font);
 
+  const legendStyle = document.querySelector('.legend').style;
+  legendStyle.setProperty('--font-secondary', theme.fontSecondary);
+
+  const propositionStyle = document.querySelector('.proposition').style;
+  propositionStyle.setProperty('--font-secondary', theme.fontSecondary);
+
+  const surfaceStyle = document.querySelector('.surface').style;
+  surfaceStyle.setProperty('--font-secondary', theme.fontSecondary);
+  surfaceStyle.setProperty('--control', theme.control);
+  surfaceStyle.setProperty('--control-brightness', theme.controlBrightness);
+
+  const byciclesStyle = document.querySelector('.bycicles').style;
+  byciclesStyle.setProperty('--font-secondary', theme.fontSecondary);
+
+  const trainingStyle = document.querySelector('.training').style;
+  trainingStyle.setProperty('--font-secondary', theme.fontSecondary);
+
   const footerStyle = document.querySelector('.footer').style;
   footerStyle.setProperty('--background-color', theme.footer);
+  footerStyle.setProperty('--theme-switch', theme.switcher);
+  footerStyle.setProperty('--copyright', theme.copyright);
+  footerStyle.setProperty('--icon-sun', theme.iconSun);
+  footerStyle.setProperty('--icon-moon', theme.iconMoon);
+
+  const plugStyle = document.querySelector('.footer__theme-switch_plug').style;
+  if (isLightTheme) {
+    plugStyle.left = '2px';
+    plugStyle.right = null;
+  } else {
+    plugStyle.right = '2px';
+    plugStyle.left = null;
+  }
 };
