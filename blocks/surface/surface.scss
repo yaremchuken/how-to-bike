@@ -1,0 +1,137 @@
+.surface {
+  padding: 60px 0 60px 120px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  &__title {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 60px;
+    letter-spacing: -0.5px;
+  }
+
+  &__description {
+    padding: 0 0 30px 0;
+    margin: 0;
+    width: 460px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #222;
+    opacity: 0.7;
+  }
+
+  &__gallery {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: flex;
+    gap: 40px;
+
+    &_img-main {
+      padding: 0;
+      margin: 0;
+    }
+
+    &_img-secondary {
+      padding: 0;
+      margin: 0;
+    }
+
+    &_pulse {
+      padding: 0;
+      margin: 0;
+      width: 100px;
+      height: 40px;
+      position: absolute;
+      display: flex;
+      bottom: 16px;
+      background-image: url(../../../../images/surface/gallery-pulse.svg);
+      background-repeat: no-repeat;
+      align-items: center;
+    }
+
+    &_pulse-line {
+      &_highway {
+        padding: 0;
+        margin: 0 0 0 16px;
+        width: 50px;
+        height: 100%;
+        background-image: url(../../../../images/surface/gallery-pulse_highway.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &_dirt {
+        padding: 0;
+        margin: 0 0 0 16px;
+        width: 50px;
+        height: 100%;
+        background-image: url(../../../../images/surface/gallery-pulse_dirt.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &_tt {
+        padding: 0;
+        margin: 0 0 0 16px;
+        width: 50px;
+        height: 100%;
+        background-image: url(../../../../images/surface/gallery-pulse_tt.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  &__controls {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+  }
+
+  &__control {
+    padding: 0;
+    margin: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    background-image: url(../../../images/surface/gallery-control.svg);
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    transition: opacity ease-in-out 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &_next::after {
+      padding: 0;
+      margin: 0 auto;
+      content: '';
+      height: 18px;
+      width: 10px;
+      align-self: center;
+      justify-self: center;
+      background-image: url(../../../../images/surface/gallery-control_next.svg);
+    }
+
+    &_previous::after {
+      padding: 0;
+      margin: 0 auto;
+      content: '';
+      height: 18px;
+      width: 10px;
+      align-self: center;
+      justify-self: center;
+      background-image: url(../../../../images/surface/gallery-control_previous.svg);
+    }
+  }
+}
