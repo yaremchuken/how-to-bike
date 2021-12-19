@@ -1,9 +1,16 @@
 .footer {
   --background-color: #efefef;
+  --theme-switch: white;
+  --copyright: #cfcfcf;
+  --control-brighness: 0;
+  --icon-sun: url(../../../../images/theme_sun_light.svg);
+  --icon-moon: url(../../../../images/theme_moon_light.svg);
 
   padding: 0;
   margin: 0;
   background-color: var(--background-color);
+
+  transition: all 0.5s;
 
   &__container {
     padding: 80px 120px 60px 120px;
@@ -82,7 +89,7 @@
     font-weight: 600;
     font-size: 14px;
     line-height: 20px;
-    color: #cfcfcf;
+    color: var(--copyright);
   }
 
   &__theme-picker {
@@ -101,51 +108,41 @@
     width: 44px;
     height: 24px;
     position: relative;
-    background-color: white;
+    background-color: var(--theme-switch);
     border: none;
     outline: none;
     border-radius: 9999px;
     cursor: pointer;
 
-    &::after {
-      content: '';
+    transition: background-color ease-in-out 0.3s;
+
+    &_plug {
       width: 20px;
       height: 20px;
       position: absolute;
       top: 2px;
-      left: 2px;
       background-color: #24b47e;
       box-shadow: 0px 0px 0px #ffffff;
       border-radius: 9999px;
     }
-
-    &_dark {
-      padding: 0;
-      margin: 0;
-    }
-
-    &_light {
-      padding: 0;
-      margin: 0;
-    }
   }
 
   &__icon {
-    &_dark {
+    &_sun {
       padding: 0;
       margin: 0;
       width: 28px;
       height: 28px;
-      background-image: url(../../../../images/theme_dark.svg);
+      background-image: var(--icon-sun);
       background-repeat: no-repeat;
     }
 
-    &_light {
+    &_moon {
       padding: 0;
       margin: 0;
       width: 28px;
       height: 28px;
-      background-image: url(../../../../images/theme_light.svg);
+      background-image: var(--icon-moon);
       background-repeat: no-repeat;
     }
   }

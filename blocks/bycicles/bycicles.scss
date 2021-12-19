@@ -1,4 +1,6 @@
 .bycicles {
+  --font-secondary: #222;
+
   padding: 60px 120px;
   margin: 0;
   display: flex;
@@ -35,7 +37,7 @@
     margin: 0;
     font-size: 18px;
     line-height: 28px;
-    color: #222;
+    color: var(--font-secondary);
     cursor: pointer;
     opacity: 0.7;
 

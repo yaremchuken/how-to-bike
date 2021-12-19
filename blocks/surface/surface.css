@@ -1,4 +1,7 @@
 .surface {
+  --font-secondary: #222;
+  --control: #ebebeb;
+  --control-brightness: 0;
   padding: 60px 0 60px 120px;
   margin: 0;
   display: -webkit-box;
@@ -26,7 +29,7 @@
   width: 460px;
   font-size: 18px;
   line-height: 28px;
-  color: #222;
+  color: var(--font-secondary);
   opacity: 0.7;
 }
 
@@ -114,14 +117,13 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-image: url(../../../images/surface/gallery-control.svg);
-  background-repeat: no-repeat;
   border: none;
   outline: none;
-  background-color: transparent;
+  background-color: var(--control);
+  border-radius: 9999px;
+  cursor: pointer;
   -webkit-transition: opacity ease-in-out 0.3s;
   transition: opacity ease-in-out 0.3s;
-  cursor: pointer;
 }
 
 .surface__control:hover {
@@ -140,6 +142,8 @@
   -ms-grid-column-align: center;
       justify-self: center;
   background-image: url(../../../../images/surface/gallery-control_next.svg);
+  -webkit-filter: brightness(var(--control-brightness));
+          filter: brightness(var(--control-brightness));
 }
 
 .surface__control_previous::after {
@@ -154,5 +158,7 @@
   -ms-grid-column-align: center;
       justify-self: center;
   background-image: url(../../../../images/surface/gallery-control_previous.svg);
+  -webkit-filter: brightness(var(--control-brightness));
+          filter: brightness(var(--control-brightness));
 }
 /*# sourceMappingURL=surface.css.map */
