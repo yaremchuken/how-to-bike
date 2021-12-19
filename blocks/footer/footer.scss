@@ -1,0 +1,152 @@
+.footer {
+  --background-color: #efefef;
+
+  padding: 0;
+  margin: 0;
+  background-color: var(--background-color);
+
+  &__container {
+    padding: 80px 120px 60px 120px;
+    margin: 0 auto;
+    position: relative;
+    max-width: 1200px;
+  }
+
+  &__form {
+    padding: 50px 0 0;
+    margin: 0;
+    display: flex;
+
+    &_fieldset {
+      padding: 0;
+      margin: 0;
+      border: none;
+      display: flex;
+    }
+
+    &_email {
+      padding: 0 0 0 20px;
+      margin: 0;
+      width: 360px;
+      height: 50px;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 28px;
+      color: inherit;
+      border: 1px solid rgba(199, 199, 199, 0.5);
+      border-radius: 4px;
+      outline: none;
+      background-color: transparent;
+      cursor: pointer;
+
+      opacity: 0.7;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &:focus {
+        border: 1px solid #c7c7c7;
+        cursor: default;
+        opacity: 1;
+      }
+
+      &:focus + .footer__form_submit {
+        display: flex;
+      }
+    }
+
+    &_submit {
+      margin: 0 0 0 -30px;
+      padding: 0;
+      display: none;
+      align-items: center;
+      border: none;
+      background-color: transparent;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  &__subscribe {
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  &__copyright {
+    padding: 100px 0 0;
+    margin: 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #cfcfcf;
+  }
+
+  &__theme-picker {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 114px;
+    bottom: 68px;
+    display: flex;
+    gap: 22px;
+  }
+
+  &__theme-switch {
+    padding: 0;
+    margin: 0;
+    width: 44px;
+    height: 24px;
+    position: relative;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 9999px;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      background-color: #24b47e;
+      box-shadow: 0px 0px 0px #ffffff;
+      border-radius: 9999px;
+    }
+
+    &_dark {
+      padding: 0;
+      margin: 0;
+    }
+
+    &_light {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &__icon {
+    &_dark {
+      padding: 0;
+      margin: 0;
+      width: 28px;
+      height: 28px;
+      background-image: url(../../../../images/theme_dark.svg);
+      background-repeat: no-repeat;
+    }
+
+    &_light {
+      padding: 0;
+      margin: 0;
+      width: 28px;
+      height: 28px;
+      background-image: url(../../../../images/theme_light.svg);
+      background-repeat: no-repeat;
+    }
+  }
+}

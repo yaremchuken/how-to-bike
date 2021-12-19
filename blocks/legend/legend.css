@@ -1,9 +1,99 @@
 .legend {
   padding: 20px 0 0 120px;
   margin: 0;
-
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 460px max-content;
+  -ms-grid-columns: 460px max-content;
+      grid-template-columns: 460px -webkit-max-content;
+      grid-template-columns: 460px max-content;
   row-gap: 50px;
-  column-gap: 250px;
+  -webkit-column-gap: 250px;
+          column-gap: 250px;
 }
+
+.legend__title {
+  padding: 60px 0 0;
+  margin: 0;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 60px;
+  letter-spacing: -0.5px;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.legend__description {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  line-height: 28px;
+  color: #222;
+  opacity: 0.7;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.legend__image {
+  padding: 0;
+  margin: 0;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
+  grid-row: 1 / span 5;
+}
+
+.legend__btn-detail {
+  padding: 0;
+  margin: 0;
+  width: 180px;
+  height: 50px;
+  background: -webkit-gradient(linear, right top, left top, color-stop(50%, #319e75), color-stop(50%, #24b47e));
+  background: linear-gradient(to left, #319e75 50%, #24b47e 50%);
+  background-size: 200%;
+  background-position-x: 0%;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  color: white;
+  cursor: pointer;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 3;
+  grid-row: 3;
+  -webkit-transition: background-position 0.5s ease;
+  transition: background-position 0.5s ease;
+}
+
+.legend__btn-detail:hover {
+  background-position-x: -100%;
+}
+
+.legend__vendor-sign {
+  padding: 120px 0 0;
+  margin: 0;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 4;
+  grid-row: 4;
+}
+
+.legend__vendor-sign_line {
+  padding: 0;
+  margin: 0 0 0 25px;
+  display: inline-block;
+  width: 130px;
+  border: 1px solid #d7d4d4;
+  vertical-align: middle;
+}
+/*# sourceMappingURL=legend.css.map */

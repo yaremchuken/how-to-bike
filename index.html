@@ -9,9 +9,8 @@
 
   <body class="body">
     <div class="page">
-
       <div class="overlay">
-        <img class="overlay__content" src="./images/overlay.png" alt="Велосипед Cannondale Systemsix Himod"></img>
+        <img class="overlay__content" src="./images/overlay.png" alt="Велосипед Cannondale Systemsix Himod" />
       </div>
 
       <header class="header">
@@ -20,24 +19,20 @@
             <li onclick="document.querySelector('#surface').scrollIntoView({ behavior: 'smooth' });" class="header__link">
               Покрытия и градиенты
             </li>
-            <li onclick="document.querySelector('#bycicles').scrollIntoView({ behavior: 'smooth' });" class="header__link">
-              Велосипеды
-            </li>
-            <li onclick="document.querySelector('#training').scrollIntoView({ behavior: 'smooth' });" class="header__link">
-              Тренировки
-            </li>
+            <li onclick="document.querySelector('#bycicles').scrollIntoView({ behavior: 'smooth' });" class="header__link">Велосипеды</li>
+            <li onclick="document.querySelector('#training').scrollIntoView({ behavior: 'smooth' });" class="header__link">Тренировки</li>
           </ul>
         </nav>
       </header>
 
-      <template id="card-template">
-        <li class="card">
-          <img class="card__image" />
-          <button type="button" class="card__btn-remove"></button>
-          <div class="card__label">
-            <p class="card__title"></p>
-            <button type="button" class="card__btn-like"></button>
-          </div>
+      <template id="bycicles-template">
+        <li class="bycicles__card">
+          <a href="#" class="bycicles__link">
+            <figure class="bycicles__display">
+              <img src="#" alt="#" class="bycicles__display_img" />
+              <figcaption class="bycicles__display_caption">#</figcaption>
+            </figure>
+          </a>
         </li>
       </template>
 
@@ -86,45 +81,12 @@
           <div class="bycicles__heading">
             <h2 class="bycicles__title">Велосипеды</h2>
             <ul class="bycicles__type-list">
-              <li class="bycicles__type bycicles__type_active">Шоссе</li>
-              <li class="bycicles__type">Грэвел</li>
-              <li class="bycicles__type">ТТ</li>
+              <li id="bycicles_highway" class="bycicles__type" onclick="switchBikes('highway');">Шоссе</li>
+              <li id="bycicles_dirt" class="bycicles__type" onclick="switchBikes('dirt');">Грэвел</li>
+              <li id="bycicles_tt" class="bycicles__type" onclick="switchBikes('tt');">ТТ</li>
             </ul>
           </div>
-          <ul class="bycicles__displays">
-            <li>
-              <figure class="bycicles__display">
-                <img
-                  src="./images/bycicles/cervelo_caledonia_5.png"
-                  alt="Шоссейный велосипед Cervelo Caledonia-5"
-                  class="bycicles__display_img"
-                />
-                <figcaption class="bycicles__display_caption">Cervelo Caledonia-5</figcaption>
-              </figure>
-            </li>
-
-            <li>
-              <figure class="bycicles__display">
-                <img
-                  src="./images/bycicles/cannondale_systemsix_himod.png"
-                  alt="Шоссейный велосипед Cannondale Systemsix Himod"
-                  class="bycicles__display_img"
-                />
-                <figcaption class="bycicles__display_caption">Cannondale Systemsix Himod</figcaption>
-              </figure>
-            </li>
-
-            <li>
-              <figure class="bycicles__display">
-                <img
-                  src="./images/bycicles/trek_domane_sl-7.png"
-                  alt="Шоссейный велосипед Trek Domane SL-7"
-                  class="bycicles__display_img"
-                />
-                <figcaption class="bycicles__display_caption">Trek Domane SL-7</figcaption>
-              </figure>
-            </li>
-          </ul>
+          <ul class="bycicles__displays"></ul>
         </section>
 
         <section class="training" id="training">
@@ -153,7 +115,7 @@
           <p class="footer__copyright">&copy; Road Club 2021</p>
           <div class="footer__theme-picker">
             <div class="footer__icon_light"></div>
-            <button class="footer__theme-switch footer__theme-switch_ligth"></button>
+            <button class="footer__theme-switch footer__theme-switch_ligth" onclick="switchTheme()"></button>
             <div class="footer__icon_dark"></div>
           </div>
         </div>

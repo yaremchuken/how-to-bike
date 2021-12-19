@@ -1,0 +1,38 @@
+.header {
+  padding: 0;
+  margin: 0 auto;
+  height: 74px;
+  max-width: 1440px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__link {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity ease-in-out 0.3s;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
+  &__links {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 34px;
+  }
+
+  &__nav-bar {
+    padding: 0 120px 0;
+    margin: 0;
+  }
+}

@@ -1,7 +1,111 @@
 .bycicles {
   padding: 60px 120px;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 120px;
 }
+
+.bycicles__heading {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bycicles__title {
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 60px;
+  letter-spacing: -0.5px;
+}
+
+.bycicles__type-list {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+  list-style-type: none;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.bycicles__type {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  line-height: 28px;
+  color: #222;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.bycicles__type:hover {
+  opacity: 0.6;
+}
+
+.bycicles__type_active {
+  padding: 0;
+  margin: 0;
+  font-weight: 600;
+  color: inherit;
+  opacity: 1;
+}
+
+.bycicles__displays {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  list-style-type: none;
+}
+
+.bycicles__link {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.bycicles__display {
+  padding: 0;
+  margin: 0;
+}
+
+.bycicles__display_img {
+  padding: 20px;
+  margin: 0;
+  width: 340px;
+  height: 340px;
+  background-color: #f4f4f4;
+  -webkit-box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+}
+
+.bycicles__display_caption {
+  padding: 20px 0 0 6px;
+  margin: 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration: none;
+}
+/*# sourceMappingURL=bycicles.css.map */
