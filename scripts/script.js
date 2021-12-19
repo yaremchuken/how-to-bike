@@ -279,3 +279,24 @@ const switchTheme = () => {
     plugStyle.left = null;
   }
 };
+
+/**
+ * Форма в футере.
+ */
+
+document.querySelector('.footer__form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  e.target.parentElement.querySelector('.footer__form_email').value = 'Круто!';
+});
+
+const submitBtn = document.querySelector('.footer__form_submit');
+
+const showOkBtn = () => {
+  submitBtn.style.opacity = 1;
+};
+
+const hideOkBtn = () => {
+  submitBtn.style.opacity = 0;
+};
+
+hideOkBtn();

@@ -106,13 +106,24 @@
       <footer class="footer">
         <div class="footer__container">
           <p class="footer__subscribe">Подпишитесь на<br />рассылку —</p>
-          <form action="" class="footer__form">
-            <fieldset class="footer__form_fieldset">
-              <input type="email" class="footer__form_email" placeholder="Ваш e-mail" />
-              <button type="submit" class="footer__form_submit">ok</button>
-            </fieldset>
-          </form>
+          <div class="footer__form_container">
+            <form class="footer__form" id="footer__form" name="footer__form">
+              <fieldset class="footer__form_fieldset">
+                <input
+                  type="email"
+                  name="footer__form_email"
+                  class="footer__form_email"
+                  placeholder="Ваш e-mail"
+                  onfocus="showOkBtn();"
+                  onblur="hideOkBtn();"
+                />
+              </fieldset>
+            </form>
+            <button type="submit" form="footer__form" class="footer__form_submit">ok</button>
+          </div>
+
           <p class="footer__copyright">&copy; Road Club 2021</p>
+
           <div class="footer__theme-picker">
             <div class="footer__icon_sun"></div>
             <button class="footer__theme-switch" onclick="switchTheme()">

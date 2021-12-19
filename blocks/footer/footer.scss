@@ -20,9 +20,16 @@
   }
 
   &__form {
-    padding: 50px 0 0;
+    padding: 0;
     margin: 0;
     display: flex;
+
+    &_container {
+      padding: 0;
+      margin: 50px 0 0;
+      width: fit-content;
+      position: relative;
+    }
 
     &_fieldset {
       padding: 0;
@@ -57,16 +64,16 @@
         cursor: default;
         opacity: 1;
       }
-
-      &:focus + .footer__form_submit {
-        display: flex;
-      }
     }
 
     &_submit {
-      margin: 0 0 0 -30px;
+      margin: 0;
       padding: 0;
-      display: none;
+      width: 16px;
+      height: 28px;
+      position: absolute;
+      top: 11px;
+      right: 22px;
       align-items: center;
       border: none;
       background-color: transparent;
