@@ -1,17 +1,25 @@
-// const overlay = document.querySelector('.overlay');
-// const page = document.querySelector('.page');
+/**
+ * Мобильное меню.
+ */
 
-// let lastY = 0;
+const handleMenuClick = (anchor) => {
+  document.querySelector(`#${anchor}`).scrollIntoView({ behavior: 'smooth' });
+  closeMobileMenu();
+};
 
-// window.addEventListener('scroll', (e) => {
-//   console.log(window.scrollY);
-//   //   const yOffset = page.getBoundingClientRect().top;
-//   //   stickBottom = yOffset > lastY;
-//   //   lastY = yOffset;
-//   //   console.log(page.getBoundingClientRect());
-//   //   console.log(scrollUp);
-//   //   overlay.style.setProperty('--pageY', `${window.scrollY + 347}px`);
-// });
+const closeMobileMenu = () => {
+  document.querySelector('.header').classList.remove('header__expanded');
+  document.querySelector('.header__mobile_toggle').classList.remove('header__mobile_close');
+  document.querySelector('.header__nav-bar').classList.remove('header__nav-bar_visible');
+  document.querySelector('.footer__theme-picker').classList.remove('footer__theme-picker_visible');
+};
+
+const toggleMobileMenu = () => {
+  document.querySelector('.header').classList.toggle('header__expanded');
+  document.querySelector('.header__mobile_toggle').classList.toggle('header__mobile_close');
+  document.querySelector('.header__nav-bar').classList.toggle('header__nav-bar_visible');
+  document.querySelector('.footer__theme-picker').classList.toggle('footer__theme-picker_visible');
+};
 
 /**
  * Переключение блока "Покрытия и градиенты".
@@ -265,6 +273,9 @@ const switchTheme = () => {
   bodyStyle.setProperty('--background-color', theme.body);
   bodyStyle.setProperty('--color', theme.font);
 
+  const headerStyle = document.querySelector('.header').style;
+  headerStyle.setProperty('--background-color', theme.body);
+
   const legendStyle = document.querySelector('.legend').style;
   legendStyle.setProperty('--font-secondary', theme.fontSecondary);
 
@@ -319,3 +330,21 @@ const hideOkBtn = () => {
 };
 
 hideOkBtn();
+
+/**
+ * При изменении размеров окна.
+ */
+
+let size = 'desktop';
+
+window.onresize = () => {
+  if (size === 'desktop' && window.innerWidth <= 1024) {
+    switchBikesMobile();
+    size = 'mobile';
+  }
+  if (size === 'mobile' && window.innerWidth > 1024) {
+    switchBikes('highway');
+    size = 'desktop';
+  }
+  closeMobileMenu();
+};

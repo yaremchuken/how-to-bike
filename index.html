@@ -14,13 +14,14 @@
       </div>
 
       <header class="header">
+        <div class="header__mobile">
+          <button class="header__mobile_toggle" onclick="toggleMobileMenu();"></button>
+        </div>
         <nav class="header__nav-bar">
           <ul class="header__links">
-            <li onclick="document.querySelector('#surface').scrollIntoView({ behavior: 'smooth' });" class="header__link">
-              Покрытия и градиенты
-            </li>
-            <li onclick="document.querySelector('#bycicles').scrollIntoView({ behavior: 'smooth' });" class="header__link">Велосипеды</li>
-            <li onclick="document.querySelector('#training').scrollIntoView({ behavior: 'smooth' });" class="header__link">Тренировки</li>
+            <li onclick="handleMenuClick('surface')" class="header__link">Покрытия и градиенты</li>
+            <li onclick="handleMenuClick('bycicles')" class="header__link">Велосипеды</li>
+            <li onclick="handleMenuClick('training')" class="header__link">Тренировки</li>
           </ul>
         </nav>
       </header>

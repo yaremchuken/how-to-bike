@@ -137,9 +137,7 @@
 .bycicles__switches {
   padding: 0;
   margin: 20px 0 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   list-style-type: none;
   gap: 5px;
   -webkit-box-pack: center;
@@ -180,6 +178,16 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .bycicles__switches {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .bycicles__displays {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .bycicles__display {
     padding: 16px;

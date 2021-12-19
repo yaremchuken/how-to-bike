@@ -4,9 +4,9 @@
   margin: 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 460px max-content;
-      grid-template-columns: 460px -webkit-max-content;
-      grid-template-columns: 460px max-content;
+  -ms-grid-columns: minmax(284px, 460px) minmax(0, 250px) max-content;
+      grid-template-columns: minmax(284px, 460px) minmax(0, 250px) -webkit-max-content;
+      grid-template-columns: minmax(284px, 460px) minmax(0, 250px) max-content;
   -ms-grid-rows: (min-content)[2] 1fr;
       grid-template-rows: repeat(2, -webkit-min-content) 1fr;
       grid-template-rows: repeat(2, min-content) 1fr;
