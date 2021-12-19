@@ -120,7 +120,7 @@
   &__switches {
     padding: 0;
     margin: 20px 0 0;
-    display: flex;
+    display: none;
     list-style-type: none;
     gap: 5px;
     justify-content: center;
@@ -160,6 +160,14 @@
 
     &__type-select {
       display: flex;
+    }
+
+    &__switches {
+      display: flex;
+    }
+
+    &__displays {
+      justify-content: center;
     }
 
     &__display {

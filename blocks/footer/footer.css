@@ -192,10 +192,21 @@
   .footer__form_email {
     width: 100%;
   }
-  .footer__theme-picker {
-    display: none;
-  }
   .footer__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer__theme-picker {
+    position: fixed;
+    bottom: 36px;
+    display: none;
+    z-index: 1100;
+  }
+  .footer__theme-picker_visible {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

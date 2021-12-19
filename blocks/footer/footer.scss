@@ -191,12 +191,23 @@
       }
     }
 
-    &__theme-picker {
-      display: none;
-    }
-
     &__logo {
       display: flex;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    &__theme-picker {
+      position: fixed;
+      bottom: 36px;
+      display: none;
+      z-index: 1100;
+
+      &_visible {
+        display: flex;
+      }
     }
   }
 }
