@@ -32,12 +32,12 @@
   letter-spacing: -0.5px;
 }
 
-.proposition__author {
+.proposition__author-sign {
   padding: 0;
   margin: 0;
 }
 
-.proposition__author_name {
+.proposition__author-name {
   padding: 0 0 8px 0;
   margin: 0;
   font-weight: 500;
@@ -45,7 +45,7 @@
   line-height: 32px;
 }
 
-.proposition__author_occupation {
+.proposition__author-occupation {
   padding: 0;
   margin: 0;
   font-size: 16px;
@@ -80,12 +80,12 @@
   .proposition__quote {
     gap: 40px;
   }
-  .proposition__author_name {
+  .proposition__author-name {
     padding: 0 0 4px 0;
     font-size: 14px;
     line-height: 22px;
   }
-  .proposition__author_occupation {
+  .proposition__author-occupation {
     font-size: 10px;
     line-height: 16px;
   }

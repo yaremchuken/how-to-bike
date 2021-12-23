@@ -21,65 +21,60 @@
 
   &__form {
     padding: 0;
-    margin: 0;
+    margin: 50px 0 0;
     display: flex;
+    position: relative;
+    width: fit-content;
+  }
 
-    &_container {
-      padding: 0;
-      margin: 50px 0 0;
-      width: fit-content;
-      position: relative;
+  &__form-fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+    display: flex;
+  }
+
+  &__form-email {
+    padding: 0 0 0 20px;
+    margin: 0;
+    width: 360px;
+    height: 50px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 28px;
+    color: inherit;
+    border: 1px solid rgba(199, 199, 199, 0.5);
+    border-radius: 4px;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
     }
 
-    &_fieldset {
-      padding: 0;
-      margin: 0;
-      border: none;
-      display: flex;
+    &:focus {
+      border: 1px solid #c7c7c7;
+      cursor: default;
+      opacity: 1;
     }
+  }
 
-    &_email {
-      padding: 0 0 0 20px;
-      margin: 0;
-      width: 360px;
-      height: 50px;
-      font-weight: 500;
-      font-size: 13px;
-      line-height: 28px;
-      color: inherit;
-      border: 1px solid rgba(199, 199, 199, 0.5);
-      border-radius: 4px;
-      outline: none;
-      background-color: transparent;
-      cursor: pointer;
-
-      opacity: 0.7;
-
-      &:hover {
-        opacity: 1;
-      }
-
-      &:focus {
-        border: 1px solid #c7c7c7;
-        cursor: default;
-        opacity: 1;
-      }
-    }
-
-    &_submit {
-      margin: 0;
-      padding: 0;
-      width: 16px;
-      height: 28px;
-      position: absolute;
-      top: 11px;
-      right: 22px;
-      align-items: center;
-      border: none;
-      background-color: transparent;
-      outline: none;
-      cursor: pointer;
-    }
+  &__form-submit {
+    margin: 0;
+    padding: 0;
+    width: 16px;
+    height: 28px;
+    position: absolute;
+    top: 11px;
+    right: 22px;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
   }
 
   &__subscribe {
@@ -109,6 +104,16 @@
     gap: 22px;
   }
 
+  &__theme-plug {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 2px;
+    background-color: #24b47e;
+    box-shadow: 0px 0px 0px #ffffff;
+    border-radius: 9999px;
+  }
+
   &__theme-switch {
     padding: 0;
     margin: 0;
@@ -122,36 +127,24 @@
     cursor: pointer;
 
     transition: background-color ease-in-out 0.3s;
-
-    &_plug {
-      width: 20px;
-      height: 20px;
-      position: absolute;
-      top: 2px;
-      background-color: #24b47e;
-      box-shadow: 0px 0px 0px #ffffff;
-      border-radius: 9999px;
-    }
   }
 
-  &__icon {
-    &_sun {
-      padding: 0;
-      margin: 0;
-      width: 28px;
-      height: 28px;
-      background-image: var(--icon-sun);
-      background-repeat: no-repeat;
-    }
+  &__icon-sun {
+    padding: 0;
+    margin: 0;
+    width: 28px;
+    height: 28px;
+    background-image: var(--icon-sun);
+    background-repeat: no-repeat;
+  }
 
-    &_moon {
-      padding: 0;
-      margin: 0;
-      width: 28px;
-      height: 28px;
-      background-image: var(--icon-moon);
-      background-repeat: no-repeat;
-    }
+  &__icon-moon {
+    padding: 0;
+    margin: 0;
+    width: 28px;
+    height: 28px;
+    background-image: var(--icon-moon);
+    background-repeat: no-repeat;
   }
 
   &__logo {
@@ -175,20 +168,16 @@
     }
 
     &__form {
+      margin: 37px 0 0;
       width: 100%;
+    }
 
-      &_container {
-        margin: 37px 0 0;
-        width: 100%;
-      }
+    &__form-fieldset {
+      width: 100%;
+    }
 
-      &_fieldset {
-        width: 100%;
-      }
-
-      &_email {
-        width: 100%;
-      }
+    &__form-email {
+      width: 100%;
     }
 
     &__logo {

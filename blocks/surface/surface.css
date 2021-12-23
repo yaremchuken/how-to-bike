@@ -31,27 +31,23 @@
   grid-row: 2;
 }
 
+.surface__img_type_main {
+  padding: 0;
+  margin: 0;
+}
+
+.surface__img_type_secondary {
+  padding: 0;
+  margin: 0;
+}
+
 .surface__gallery {
   padding: 0;
   margin: 0;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 40px;
 }
 
-.surface__gallery_img-main {
-  padding: 0;
-  margin: 0;
-}
-
-.surface__gallery_img-secondary {
-  padding: 0;
-  margin: 0;
-}
-
-.surface__gallery_pulse {
+.surface__pulse {
   padding: 0;
   margin: 0;
   width: 100px;
@@ -69,7 +65,7 @@
           align-items: center;
 }
 
-.surface__gallery_pulse-line {
+.surface__pulse-line {
   padding: 0;
   margin: 0 0 0 16px;
   width: 50px;
@@ -79,16 +75,26 @@
   background-size: contain;
 }
 
-.surface__gallery_pulse-line_highway {
+.surface__pulse-line_type_highway {
   background-image: url(../../images/surface/gallery-pulse_highway.svg);
 }
 
-.surface__gallery_pulse-line_dirt {
+.surface__pulse-line_type_dirt {
   background-image: url(../../images/surface/gallery-pulse_dirt.svg);
 }
 
-.surface__gallery_pulse-line_tt {
+.surface__pulse-line_type_tt {
   background-image: url(../../images/surface/gallery-pulse_tt.svg);
+}
+
+.surface__sliders {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
 }
 
 .surface__controls {
@@ -121,7 +127,7 @@
   opacity: 0.6;
 }
 
-.surface__control_next::after {
+.surface__control_type_next::after {
   padding: 0;
   margin: 0 auto;
   content: '';
@@ -138,7 +144,7 @@
           filter: brightness(var(--control-brightness));
 }
 
-.surface__control_previous::after {
+.surface__control_type_previous::after {
   padding: 0;
   margin: 0 auto;
   content: '';
@@ -178,10 +184,10 @@
     font-size: 12px;
     line-height: 18px;
   }
-  .surface__gallery_img-main {
+  .surface__img_type_main {
     width: 100%;
   }
-  .surface__gallery_img-secondary {
+  .surface__img_type_secondary {
     display: none;
   }
   .surface__gallery_pulse {
@@ -202,11 +208,11 @@
     width: 24px;
     height: 24px;
   }
-  .surface__control_next::after {
+  .surface__control_type_next::after {
     height: 10px;
     width: 5px;
   }
-  .surface__control_previous::after {
+  .surface__control_type_previous::after {
     height: 10px;
     width: 5px;
   }

@@ -1,3 +1,5 @@
+@import '../variables/variables.scss';
+
 .surface {
   --font-secondary: #222;
   --control: #ebebeb;
@@ -30,46 +32,50 @@
     grid-row: 2;
   }
 
+  &__img {
+    &_type {
+      &_main {
+        padding: 0;
+        margin: 0;
+      }
+
+      &_secondary {
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+
   &__gallery {
     padding: 0;
     margin: 0;
     position: relative;
+  }
+
+  &__pulse {
+    padding: 0;
+    margin: 0;
+    width: 100px;
+    height: 40px;
+    position: absolute;
     display: flex;
-    gap: 40px;
+    bottom: 16px;
+    background-image: url(../../images/surface/gallery-pulse.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+  }
 
-    &_img-main {
-      padding: 0;
-      margin: 0;
-    }
+  &__pulse-line {
+    padding: 0;
+    margin: 0 0 0 16px;
+    width: 50px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 
-    &_img-secondary {
-      padding: 0;
-      margin: 0;
-    }
-
-    &_pulse {
-      padding: 0;
-      margin: 0;
-      width: 100px;
-      height: 40px;
-      position: absolute;
-      display: flex;
-      bottom: 16px;
-      background-image: url(../../images/surface/gallery-pulse.svg);
-      background-repeat: no-repeat;
-      background-size: contain;
-      align-items: center;
-    }
-
-    &_pulse-line {
-      padding: 0;
-      margin: 0 0 0 16px;
-      width: 50px;
-      height: 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-
+    &_type {
       &_highway {
         background-image: url(../../images/surface/gallery-pulse_highway.svg);
       }
@@ -82,6 +88,14 @@
         background-image: url(../../images/surface/gallery-pulse_tt.svg);
       }
     }
+  }
+
+  &__sliders {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
   }
 
   &__controls {
@@ -108,30 +122,32 @@
       opacity: 0.6;
     }
 
-    &_next::after {
-      padding: 0;
-      margin: 0 auto;
-      content: '';
-      height: 18px;
-      width: 10px;
-      align-self: center;
-      justify-self: center;
-      background-image: url(../../images/surface/gallery-control_next.svg);
-      background-size: contain;
-      filter: brightness(var(--control-brightness));
-    }
+    &_type {
+      &_next::after {
+        padding: 0;
+        margin: 0 auto;
+        content: '';
+        height: 18px;
+        width: 10px;
+        align-self: center;
+        justify-self: center;
+        background-image: url(../../images/surface/gallery-control_next.svg);
+        background-size: contain;
+        filter: brightness(var(--control-brightness));
+      }
 
-    &_previous::after {
-      padding: 0;
-      margin: 0 auto;
-      content: '';
-      height: 18px;
-      width: 10px;
-      align-self: center;
-      justify-self: center;
-      background-image: url(../../images/surface/gallery-control_previous.svg);
-      background-size: contain;
-      filter: brightness(var(--control-brightness));
+      &_previous::after {
+        padding: 0;
+        margin: 0 auto;
+        content: '';
+        height: 18px;
+        width: 10px;
+        align-self: center;
+        justify-self: center;
+        background-image: url(../../images/surface/gallery-control_previous.svg);
+        background-size: contain;
+        filter: brightness(var(--control-brightness));
+      }
     }
   }
 }
@@ -143,7 +159,7 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    border-top: 1px solid #e3e3e3;
+    border-top: $border-top;
 
     &__title {
       padding: 38px 0 0;
@@ -156,15 +172,19 @@
       line-height: 18px;
     }
 
+    &__img {
+      &_type {
+        &_main {
+          width: 100%;
+        }
+
+        &_secondary {
+          display: none;
+        }
+      }
+    }
+
     &__gallery {
-      &_img-main {
-        width: 100%;
-      }
-
-      &_img-secondary {
-        display: none;
-      }
-
       &_pulse {
         width: 70px;
         height: 28px;
@@ -187,14 +207,16 @@
       width: 24px;
       height: 24px;
 
-      &_next::after {
-        height: 10px;
-        width: 5px;
-      }
+      &_type {
+        &_next::after {
+          height: 10px;
+          width: 5px;
+        }
 
-      &_previous::after {
-        height: 10px;
-        width: 5px;
+        &_previous::after {
+          height: 10px;
+          width: 5px;
+        }
       }
     }
   }

@@ -1,3 +1,5 @@
+@import '../variables/variables.scss';
+
 .bycicles {
   --font-secondary: #222;
 
@@ -97,23 +99,25 @@
     padding: 0;
     margin: 0;
 
-    &_img {
-      padding: 20px;
-      margin: 0;
-      width: 340px;
-      height: 340px;
-      background-color: #f4f4f4;
-      box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.08);
-      border-radius: 20px;
-    }
+    &_type {
+      &_img {
+        padding: 20px;
+        margin: 0;
+        width: 340px;
+        height: 340px;
+        background-color: #f4f4f4;
+        box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.08);
+        border-radius: 20px;
+      }
 
-    &_caption {
-      padding: 20px 0 0 6px;
-      margin: 0;
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 22px;
-      text-decoration: none;
+      &_caption {
+        padding: 20px 0 0 6px;
+        margin: 0;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        text-decoration: none;
+      }
     }
   }
 
@@ -146,7 +150,7 @@
     padding: 0 0 80px 0;
     margin: 0 18px;
     gap: 0;
-    border-top: 1px solid #e3e3e3;
+    border-top: $border-top;
 
     &__title {
       padding: 40px 0 0;
@@ -176,21 +180,23 @@
       box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.08);
       border-radius: 20px;
 
-      &_img {
-        padding: 0;
-        width: 254px;
-        height: 254px;
-        background-color: transparent;
-        box-shadow: none;
-        border-radius: 0;
-      }
+      &_type {
+        &_img {
+          padding: 0;
+          width: 254px;
+          height: 254px;
+          background-color: transparent;
+          box-shadow: none;
+          border-radius: 0;
+        }
 
-      &_caption {
-        padding: 0;
-        margin: 0;
-        font-size: 14px;
-        line-height: 18px;
-        text-align: center;
+        &_caption {
+          padding: 0;
+          margin: 0;
+          font-size: 14px;
+          line-height: 18px;
+          text-align: center;
+        }
       }
     }
   }
