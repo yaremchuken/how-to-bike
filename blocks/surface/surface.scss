@@ -35,13 +35,11 @@
   &__img {
     &_type {
       &_main {
-        padding: 0;
-        margin: 0;
+        width: 100%;
       }
 
       &_secondary {
-        padding: 0;
-        margin: 0;
+        width: 100%;
       }
     }
   }
@@ -58,8 +56,9 @@
     width: 100px;
     height: 40px;
     position: absolute;
-    display: flex;
+    left: 0;
     bottom: 16px;
+    display: flex;
     background-image: url(../../images/surface/gallery-pulse.svg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -96,6 +95,7 @@
     list-style-type: none;
     display: flex;
     gap: 40px;
+    position: relative;
   }
 
   &__controls {
@@ -152,13 +152,13 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1050px) {
   .surface {
     padding: 0 0 50px 0;
     margin: 0 18px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 38px;
     border-top: $border-top;
 
     &__title {
@@ -168,16 +168,14 @@
     }
 
     &__description {
+      max-width: none;
       font-size: 12px;
       line-height: 18px;
+      align-self: center;
     }
 
     &__img {
       &_type {
-        &_main {
-          width: 100%;
-        }
-
         &_secondary {
           display: none;
         }
@@ -185,15 +183,21 @@
     }
 
     &__gallery {
-      &_pulse {
-        width: 70px;
-        height: 28px;
-      }
+      display: flex;
+      justify-content: center;
+    }
 
-      &_pulse-line {
-        margin: 0 0 0 10px;
-        width: 35px;
-      }
+    &__pulse {
+      width: 70px;
+      height: 28px;
+    }
+
+    &__pulse-line {
+      margin: 0 0 0 10px;
+      width: 35px;
+    }
+    &__sliders {
+      gap: 0;
     }
 
     &__controls {

@@ -4,15 +4,13 @@
   margin: 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: minmax(284px, 460px) minmax(0, 250px) max-content;
-      grid-template-columns: minmax(284px, 460px) minmax(0, 250px) -webkit-max-content;
-      grid-template-columns: minmax(284px, 460px) minmax(0, 250px) max-content;
+  -ms-grid-columns: minmax(340px, 460px) minmax(0, 250px) max-content;
+      grid-template-columns: minmax(340px, 460px) minmax(0, 250px) -webkit-max-content;
+      grid-template-columns: minmax(340px, 460px) minmax(0, 250px) max-content;
   -ms-grid-rows: (min-content)[2] 1fr;
       grid-template-rows: repeat(2, -webkit-min-content) 1fr;
       grid-template-rows: repeat(2, min-content) 1fr;
   row-gap: 50px;
-  -webkit-column-gap: 160px;
-          column-gap: 160px;
 }
 
 .training__title {
@@ -44,8 +42,8 @@
 .training__image {
   padding: 0;
   margin: 0;
-  -ms-grid-column: 2;
-  grid-column: 2;
+  -ms-grid-column: 3;
+  grid-column: 3;
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   grid-row: 1 / span 3;
@@ -84,7 +82,13 @@
   opacity: 0.75;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
+  .training__image {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
   .training {
     padding: 0 0 57px 0;
     margin: 0 18px;
@@ -102,6 +106,9 @@
     padding: 40px 0 0;
     font-size: 32px;
     line-height: 40px;
+  }
+  .training__image {
+    width: 100%;
   }
   .training__description {
     font-size: 12px;

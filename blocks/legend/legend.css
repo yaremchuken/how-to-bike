@@ -96,7 +96,7 @@
   vertical-align: middle;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1050px) {
   .legend {
     padding: 0 18px 80px 18px;
     display: -webkit-box;

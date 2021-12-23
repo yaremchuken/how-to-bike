@@ -160,7 +160,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1050px) {
   .footer {
     &__container {
       padding: 60px 0 25px 0;
@@ -183,11 +183,7 @@
     &__logo {
       display: flex;
     }
-  }
-}
 
-@media screen and (max-width: 1024px) {
-  .footer {
     &__theme-picker {
       position: fixed;
       bottom: 36px;
