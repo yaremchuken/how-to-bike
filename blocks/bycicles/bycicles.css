@@ -159,7 +159,14 @@
   background-color: #151515;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1440px) {
+  .bycicles__display_type_img {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
   .bycicles {
     padding: 0 0 80px 0;
     margin: 0 18px;

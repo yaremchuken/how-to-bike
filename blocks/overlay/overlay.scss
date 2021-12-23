@@ -22,13 +22,17 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1050px) {
   .overlay {
     justify-content: flex-start;
+    position: absolute;
+    top: 386px;
+    left: 18px;
+    height: auto;
 
     &__content {
       padding: 10px 26px;
-      margin: 0 0 0 18px;
+      margin: 0;
       width: 180px;
       height: 138px;
     }
