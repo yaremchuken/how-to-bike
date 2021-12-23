@@ -1,3 +1,5 @@
+@import '../variables/variables.scss';
+
 .training {
   --font-secondary: #222;
 
@@ -78,7 +80,7 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    border-top: 1px solid #e3e3e3;
+    border-top: $border-top;
 
     &__title {
       padding: 40px 0 0;

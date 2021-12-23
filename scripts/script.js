@@ -2,21 +2,20 @@
  * Мобильное меню.
  */
 
-const handleMenuClick = (anchor) => {
-  document.querySelector(`#${anchor}`).scrollIntoView({ behavior: 'smooth' });
-  closeMobileMenu();
-};
+document.querySelector('.header__mobile_btn_toggle').addEventListener('click', () => toggleMobileMenu());
+
+document.querySelectorAll('.header__link').forEach((link) => link.addEventListener('click', () => closeMobileMenu()));
 
 const closeMobileMenu = () => {
   document.querySelector('.header').classList.remove('header__expanded');
-  document.querySelector('.header__mobile_toggle').classList.remove('header__mobile_close');
+  document.querySelector('.header__mobile_btn_toggle').classList.remove('header__mobile_close');
   document.querySelector('.header__nav-bar').classList.remove('header__nav-bar_visible');
   document.querySelector('.footer__theme-picker').classList.remove('footer__theme-picker_visible');
 };
 
 const toggleMobileMenu = () => {
   document.querySelector('.header').classList.toggle('header__expanded');
-  document.querySelector('.header__mobile_toggle').classList.toggle('header__mobile_close');
+  document.querySelector('.header__mobile_btn_toggle').classList.toggle('header__mobile_close');
   document.querySelector('.header__nav-bar').classList.toggle('header__nav-bar_visible');
   document.querySelector('.footer__theme-picker').classList.toggle('footer__theme-picker_visible');
 };
@@ -35,7 +34,7 @@ const surfaces = [
       { src: './images/surface/surface_highway_1.png', alt: 'Шоссе уходящее в закат' },
       { src: './images/surface/surface_dirt_1.png', alt: 'Грунтовая дорога через лес' },
     ],
-    pulse: 'surface__gallery_pulse-line_highway',
+    pulse: 'surface__pulse-line surface__pulse-line_type_highway',
   },
   {
     title: 'Грэвел',
@@ -46,7 +45,7 @@ const surfaces = [
       { src: './images/surface/surface_dirt_1.png', alt: 'Грунтовая дорога через лес' },
       { src: './images/surface/surface_highway_2.png', alt: 'Шоссе уходящее в закат' },
     ],
-    pulse: 'surface__gallery_pulse-line_dirt',
+    pulse: 'surface__pulse-line surface__pulse-line_type_dirt',
   },
   {
     title: 'ТТ',
@@ -57,7 +56,7 @@ const surfaces = [
       { src: './images/surface/surface_highway_2.png', alt: 'Шоссе уходящее в закат' },
       { src: './images/surface/surface_highway_1.png', alt: 'Шоссе уходящее в закат' },
     ],
-    pulse: 'surface__gallery_pulse-line_tt',
+    pulse: 'surface__pulse-line surface__pulse-line_type_tt',
   },
 ];
 
@@ -65,12 +64,12 @@ let galleryIdx = 0;
 
 const surfaceTitle = document.querySelector('.surface__title');
 const surfaceDescription = document.querySelector('.surface__description');
-const surfaceImgMain = document.querySelector('.surface__gallery_img-main');
-const surfaceImgSecondary = document.querySelector('.surface__gallery_img-secondary');
-const surfacePulse = document.querySelector('.surface__gallery_pulse');
+const surfaceImgMain = document.querySelector('.surface__img_type_main');
+const surfaceImgSecondary = document.querySelector('.surface__img_type_secondary');
+const surfacePulse = document.querySelector('.surface__pulse');
 
-document.querySelector('.surface__control_previous').addEventListener('click', () => switchGallery(false));
-document.querySelector('.surface__control_next').addEventListener('click', () => switchGallery(true));
+document.querySelector('.surface__control_type_previous').addEventListener('click', () => switchGallery(false));
+document.querySelector('.surface__control_type_next').addEventListener('click', () => switchGallery(true));
 
 const switchGallery = (forward) => {
   galleryIdx += forward ? 1 : -1;
@@ -158,6 +157,16 @@ const bikeTypes = [
   },
 ];
 
+document
+  .querySelectorAll('.bycicles__type')
+  .forEach((el) => el.addEventListener('click', () => switchBikes(el.id.replace('bycicles_', ''))));
+
+document.querySelector('.bycicles__type-select').addEventListener('change', () => switchBikesMobile());
+
+document
+  .querySelectorAll('.bycicles__switcher')
+  .forEach((el) => el.addEventListener('click', () => switchBikesMobile(+el.id.replace('bycicle__switch_', ''))));
+
 const bikeTemplate = document.querySelector('#bycicles-template').content.querySelector('.bycicles__card');
 const byciclesDisplays = document.querySelector('.bycicles__displays');
 
@@ -194,9 +203,9 @@ const createBikeDisplay = (bike) => {
   const bikeEl = bikeTemplate.cloneNode(true);
 
   bikeEl.querySelector('.bycicles__link').href = bike.link;
-  bikeEl.querySelector('.bycicles__display_img').src = bike.src;
-  bikeEl.querySelector('.bycicles__display_img').alt = `Велосипед ${bike.name}`;
-  bikeEl.querySelector('.bycicles__display_caption').textContent = bike.name;
+  bikeEl.querySelector('.bycicles__display_type_img').src = bike.src;
+  bikeEl.querySelector('.bycicles__display_type_img').alt = `Велосипед ${bike.name}`;
+  bikeEl.querySelector('.bycicles__display_type_caption').textContent = bike.name;
 
   return bikeEl;
 };
@@ -260,7 +269,8 @@ const themes = [
   },
 ];
 
-document.querySelector('.footer__theme-switch_plug').style.left = '2px';
+document.querySelector('.footer__theme-switch').addEventListener('click', () => switchTheme());
+document.querySelector('.footer__theme-plug').style.left = '2px';
 
 let isLightTheme = true;
 
@@ -300,7 +310,7 @@ const switchTheme = () => {
   footerStyle.setProperty('--icon-sun', theme.iconSun);
   footerStyle.setProperty('--icon-moon', theme.iconMoon);
 
-  const plugStyle = document.querySelector('.footer__theme-switch_plug').style;
+  const plugStyle = document.querySelector('.footer__theme-plug').style;
   if (isLightTheme) {
     plugStyle.left = '2px';
     plugStyle.right = null;
@@ -316,10 +326,13 @@ const switchTheme = () => {
 
 document.querySelector('.footer__form').addEventListener('submit', (e) => {
   e.preventDefault();
-  e.target.parentElement.querySelector('.footer__form_email').value = 'Круто!';
+  e.target.parentElement.querySelector('.footer__form-email').value = 'Круто!';
 });
 
-const submitBtn = document.querySelector('.footer__form_submit');
+document.querySelector('.footer__form-email').addEventListener('focus', () => showOkBtn());
+document.querySelector('.footer__form-email').addEventListener('blur', () => hideOkBtn());
+
+const submitBtn = document.querySelector('.footer__form-submit');
 
 const showOkBtn = () => {
   submitBtn.style.opacity = 1;

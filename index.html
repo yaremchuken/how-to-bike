@@ -9,19 +9,21 @@
 
   <body class="body">
     <div class="page">
-      <div class="overlay">
-        <img class="overlay__content" src="./images/overlay.png" alt="Велосипед Cannondale Systemsix Himod" />
-      </div>
-
       <header class="header">
         <div class="header__mobile">
-          <button class="header__mobile_toggle" onclick="toggleMobileMenu();"></button>
+          <button type="button" class="header__mobile_btn_toggle"></button>
         </div>
         <nav class="header__nav-bar">
           <ul class="header__links">
-            <li onclick="handleMenuClick('surface')" class="header__link">Покрытия и градиенты</li>
-            <li onclick="handleMenuClick('bycicles')" class="header__link">Велосипеды</li>
-            <li onclick="handleMenuClick('training')" class="header__link">Тренировки</li>
+            <li>
+              <a class="header__link" href="#surface">Покрытия и градиенты</a>
+            </li>
+            <li>
+              <a class="header__link" href="#bycicles">Велосипеды</a>
+            </li>
+            <li>
+              <a class="header__link" href="#training">Тренировки</a>
+            </li>
           </ul>
         </nav>
       </header>
@@ -30,8 +32,8 @@
         <li class="bycicles__card">
           <a href="#" class="bycicles__link">
             <figure class="bycicles__display">
-              <img src="#" alt="#" class="bycicles__display_img" />
-              <figcaption class="bycicles__display_caption">#</figcaption>
+              <img src="#" alt="#" class="bycicles__display_type_img" />
+              <figcaption class="bycicles__display_type_caption">#</figcaption>
             </figure>
           </a>
         </li>
@@ -39,14 +41,18 @@
 
       <main class="content">
         <section class="legend">
-          <h2 class="legend__title">Шоссе, ТТ и&nbsp;Грэвел</h2>
+          <div class="overlay">
+            <img class="overlay__content" src="./images/overlay.png" alt="Велосипед Cannondale Systemsix Himod" />
+          </div>
+
+          <h1 class="legend__title">Шоссе, ТТ и&nbsp;Грэвел</h1>
           <img class="legend__image" src="./images/legend.png" alt="Проезд по грунтовой дороге сквозь лес в сторону гор" />
           <p class="legend__description">
             Триатлонные старты, горные серпантины или грейвел заезды по живописным маршрутам – нужно только определиться с выбором
             велосипеда и отправиться в путь.
           </p>
-          <button class="legend__btn-detail">Подробнее</button>
-          <p class="legend__vendor-sign">Cannondale Systemsix <span class="legend__vendor-sign_line"></span></p>
+          <button type="button" class="legend__btn-detail">Подробнее</button>
+          <p class="legend__vendor-sign">Cannondale Systemsix <span class="legend__vendor-sign_type_line"></span></p>
         </section>
 
         <section class="proposition">
@@ -54,9 +60,9 @@
           <div class="proposition__quote">
             <p class="proposition__saying">«Катайся много или мало, долго или коротко, как хочешь - но катайся»</p>
 
-            <div class="proposition__author">
-              <p class="proposition__author_name">Эдди Меркс</p>
-              <p class="proposition__author_occupation">Велогонщик</p>
+            <div class="proposition__author-sign">
+              <p class="proposition__author-name">Эдди Меркс</p>
+              <p class="proposition__author-occupation">Велогонщик</p>
             </div>
           </div>
         </section>
@@ -64,17 +70,23 @@
         <section class="surface" id="surface">
           <h2 class="surface__title">Шоссе</h2>
           <div class="surface__gallery">
-            <img src="./images/surface/surface_highway_1.png" alt="Шоссе уходящее в закат" class="surface__gallery_img-main" />
-            <img src="./images/surface/surface_dirt_1.png" alt="Грунтовая дорога через лес" class="surface__gallery_img-secondary" />
-            <div class="surface__gallery_pulse"><span class="surface__gallery_pulse-line surface__gallery_pulse-line_highway"></span></div>
+            <ul class="surface__sliders">
+              <li>
+                <img src="./images/surface/surface_highway_1.png" alt="Шоссе уходящее в закат" class="surface__img_type_main" />
+              </li>
+              <li>
+                <img src="./images/surface/surface_dirt_1.png" alt="Грунтовая дорога через лес" class="surface__img_type_secondary" />
+              </li>
+            </ul>
+            <div class="surface__pulse"><span class="surface__pulse-line surface__pulse-line_type_highway"></span></div>
           </div>
           <p class="surface__description">
             На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном
             пелотоне, но тренироваться можно и самостоятельно.
           </p>
           <div class="surface__controls">
-            <button class="surface__control surface__control_previous"></button>
-            <button class="surface__control surface__control_next"></button>
+            <button type="button" class="surface__control surface__control_type_previous"></button>
+            <button type="button" class="surface__control surface__control_type_next"></button>
           </div>
         </section>
 
@@ -82,12 +94,12 @@
           <div class="bycicles__heading">
             <h2 class="bycicles__title">Велосипеды</h2>
             <ul class="bycicles__type-list">
-              <li id="bycicles_highway" class="bycicles__type" onclick="switchBikes('highway');">Шоссе</li>
-              <li id="bycicles_dirt" class="bycicles__type" onclick="switchBikes('dirt');">Грэвел</li>
-              <li id="bycicles_tt" class="bycicles__type" onclick="switchBikes('tt');">ТТ</li>
+              <li id="bycicles_highway" class="bycicles__type">Шоссе</li>
+              <li id="bycicles_dirt" class="bycicles__type">Грэвел</li>
+              <li id="bycicles_tt" class="bycicles__type">ТТ</li>
             </ul>
           </div>
-          <select class="bycicles__type-select" onchange="switchBikesMobile();">
+          <select class="bycicles__type-select">
             <option class="bycicles__option" selected value="highway">Шоссе</option>
             <option class="bycicles__option" value="dirt">Грэвел</option>
             <option class="bycicles__option" value="tt">ТТ</option>
@@ -96,9 +108,9 @@
 
           <!-- TODO: поменять чтобы количество переключалок зависело от количества картинок -->
           <ul class="bycicles__switches">
-            <li class="bycicles__switcher bycicles__switcher_active" id="bycicle__switch_0" onclick="switchBikesMobile(0);"></li>
-            <li class="bycicles__switcher" id="bycicle__switch_1" onclick="switchBikesMobile(1);"></li>
-            <li class="bycicles__switcher" id="bycicle__switch_2" onclick="switchBikesMobile(2);"></li>
+            <li class="bycicles__switcher bycicles__switcher_active" id="bycicle__switch_0"></li>
+            <li class="bycicles__switcher" id="bycicle__switch_1"></li>
+            <li class="bycicles__switcher" id="bycicle__switch_2"></li>
           </ul>
         </section>
 
@@ -118,31 +130,22 @@
 
       <footer class="footer">
         <div class="footer__container">
-          <p class="footer__subscribe">Подпишитесь на<br />рассылку —</p>
-          <div class="footer__form_container">
-            <form class="footer__form" id="footer__form" name="footer__form">
-              <fieldset class="footer__form_fieldset">
-                <input
-                  type="email"
-                  name="footer__form_email"
-                  class="footer__form_email"
-                  placeholder="Ваш e-mail"
-                  onfocus="showOkBtn();"
-                  onblur="hideOkBtn();"
-                />
-              </fieldset>
-            </form>
-            <button type="submit" form="footer__form" class="footer__form_submit">ok</button>
-          </div>
+          <h2 class="footer__subscribe">Подпишитесь на<br />рассылку —</h2>
+          <form class="footer__form" id="footer__form" name="footer__form">
+            <fieldset class="footer__form-fieldset">
+              <input type="email" name="footer__form-email" class="footer__form-email" placeholder="Ваш e-mail" />
+            </fieldset>
+            <button type="submit" form="footer__form" class="footer__form-submit">ok</button>
+          </form>
 
           <p class="footer__copyright">&copy; Road Club 2021</p>
 
           <div class="footer__theme-picker">
-            <div class="footer__icon_sun"></div>
-            <button class="footer__theme-switch" onclick="switchTheme()">
-              <span class="footer__theme-switch_plug"></span>
+            <div class="footer__icon-sun"></div>
+            <button type="button" class="footer__theme-switch">
+              <span class="footer__theme-plug"></span>
             </button>
-            <div class="footer__icon_moon"></div>
+            <div class="footer__icon-moon"></div>
           </div>
         </div>
         <div class="footer__logo"></div>

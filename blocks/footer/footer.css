@@ -21,22 +21,17 @@
 
 .footer__form {
   padding: 0;
-  margin: 0;
+  margin: 50px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.footer__form_container {
-  padding: 0;
-  margin: 50px 0 0;
+  position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  position: relative;
 }
 
-.footer__form_fieldset {
+.footer__form-fieldset {
   padding: 0;
   margin: 0;
   border: none;
@@ -45,7 +40,7 @@
   display: flex;
 }
 
-.footer__form_email {
+.footer__form-email {
   padding: 0 0 0 20px;
   margin: 0;
   width: 360px;
@@ -62,17 +57,17 @@
   opacity: 0.7;
 }
 
-.footer__form_email:hover {
+.footer__form-email:hover {
   opacity: 1;
 }
 
-.footer__form_email:focus {
+.footer__form-email:focus {
   border: 1px solid #c7c7c7;
   cursor: default;
   opacity: 1;
 }
 
-.footer__form_submit {
+.footer__form-submit {
   margin: 0;
   padding: 0;
   width: 16px;
@@ -118,6 +113,17 @@
   gap: 22px;
 }
 
+.footer__theme-plug {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 2px;
+  background-color: #24b47e;
+  -webkit-box-shadow: 0px 0px 0px #ffffff;
+          box-shadow: 0px 0px 0px #ffffff;
+  border-radius: 9999px;
+}
+
 .footer__theme-switch {
   padding: 0;
   margin: 0;
@@ -133,18 +139,7 @@
   transition: background-color ease-in-out 0.3s;
 }
 
-.footer__theme-switch_plug {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 2px;
-  background-color: #24b47e;
-  -webkit-box-shadow: 0px 0px 0px #ffffff;
-          box-shadow: 0px 0px 0px #ffffff;
-  border-radius: 9999px;
-}
-
-.footer__icon_sun {
+.footer__icon-sun {
   padding: 0;
   margin: 0;
   width: 28px;
@@ -153,7 +148,7 @@
   background-repeat: no-repeat;
 }
 
-.footer__icon_moon {
+.footer__icon-moon {
   padding: 0;
   margin: 0;
   width: 28px;
@@ -180,16 +175,13 @@
     margin: 0 18px;
   }
   .footer__form {
-    width: 100%;
-  }
-  .footer__form_container {
     margin: 37px 0 0;
     width: 100%;
   }
-  .footer__form_fieldset {
+  .footer__form-fieldset {
     width: 100%;
   }
-  .footer__form_email {
+  .footer__form-email {
     width: 100%;
   }
   .footer__logo {

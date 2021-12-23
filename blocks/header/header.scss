@@ -3,7 +3,7 @@
 
   padding: 0;
   margin: 0 auto;
-  height: 74px;
+  min-height: 74px;
   max-width: 1440px;
   display: flex;
   justify-content: flex-end;
@@ -14,19 +14,21 @@
     margin: 0;
     display: none;
 
-    &_toggle {
-      padding: 0;
-      margin: 22px 18px 0 0;
-      width: 22px;
-      height: 30px;
-      display: flex;
-      flex-direction: column;
-      background-image: url(../../images/mobile_menu.svg);
-      background-color: transparent;
-      border: none;
-      outline: none;
-      gap: 4px;
-      cursor: pointer;
+    &_btn {
+      &_toggle {
+        padding: 0;
+        margin: 22px 18px 0 0;
+        width: 22px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        background-image: url(../../images/mobile_menu.svg);
+        background-color: transparent;
+        border: none;
+        outline: none;
+        gap: 4px;
+        cursor: pointer;
+      }
     }
 
     &_line {

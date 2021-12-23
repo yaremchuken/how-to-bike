@@ -4,10 +4,7 @@
   position: -webkit-sticky;
   position: sticky;
   top: 347px;
-  bottom: 79px;
-  left: 0;
-  right: 0;
-  height: 0;
+  height: calc(100% + 79px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
