@@ -190,8 +190,14 @@
     display: flex;
   }
   .footer__theme-picker {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     position: fixed;
     bottom: 36px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     display: none;
     z-index: 1100;
   }

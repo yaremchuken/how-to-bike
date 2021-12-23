@@ -185,8 +185,12 @@
     }
 
     &__theme-picker {
+      width: fit-content;
       position: fixed;
       bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+
       display: none;
       z-index: 1100;
 
