@@ -11,7 +11,8 @@
     <div class="page">
       <header class="header">
         <div class="header__mobile">
-          <button type="button" class="header__mobile_btn_toggle"></button>
+          <button type="button" class="header__mobile-toggle header__mobile_btn_visible"></button>
+          <button type="button" class="header__mobile-close"></button>
         </div>
         <nav class="header__nav-bar">
           <ul class="header__links">
@@ -52,7 +53,7 @@
             велосипеда и отправиться в путь.
           </p>
           <button type="button" class="legend__btn-detail">Подробнее</button>
-          <p class="legend__vendor-sign">Cannondale Systemsix <span class="legend__vendor-sign_type_line"></span></p>
+          <p class="legend__vendor-sign">Cannondale Systemsix <span class="legend__vendor-underline"></span></p>
         </section>
 
         <section class="proposition">
@@ -72,11 +73,11 @@
           <div class="surface__gallery">
             <ul class="surface__sliders">
               <li>
-                <img src="./images/surface/surface_highway_1.png" alt="Шоссе уходящее в закат" class="surface__img_type_main" />
+                <img src="./images/surface/surface_highway_1.png" alt="Шоссе уходящее в закат" class="surface__main-image" />
                 <div class="surface__pulse"><span class="surface__pulse-line surface__pulse-line_type_highway"></span></div>
               </li>
               <li>
-                <img src="./images/surface/surface_dirt_1.png" alt="Грунтовая дорога через лес" class="surface__img_type_secondary" />
+                <img src="./images/surface/surface_dirt_1.png" alt="Грунтовая дорога через лес" class="surface__secondary-image" />
               </li>
             </ul>
           </div>
@@ -85,8 +86,12 @@
             пелотоне, но тренироваться можно и самостоятельно.
           </p>
           <div class="surface__controls">
-            <button type="button" class="surface__control surface__control_type_previous"></button>
-            <button type="button" class="surface__control surface__control_type_next"></button>
+            <button type="button" class="surface__control" id="control-previous">
+              <span class="surface__control-previous"></span>
+            </button>
+            <button type="button" class="surface__control" id="control-next">
+              <span class="surface__control-next"></span>
+            </button>
           </div>
         </section>
 

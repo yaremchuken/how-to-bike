@@ -1,5 +1,4 @@
 .header {
-  --background-color: #f4f4f4;
   padding: 0;
   margin: 0 auto;
   min-height: 74px;
@@ -15,35 +14,52 @@
           align-items: center;
 }
 
+.header__mobile-toggle {
+  padding: 0;
+  margin: 22px 18px 0 0;
+  width: 22px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  gap: 4px;
+  cursor: pointer;
+  height: 30px;
+  background-image: url(../../images/mobile_menu_light.svg);
+}
+
+.header__mobile-close {
+  padding: 0;
+  margin: 22px 18px 0 0;
+  width: 22px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  gap: 4px;
+  cursor: pointer;
+  height: 22px;
+  background-image: url(../../images/mobile_btn-close_light.svg);
+}
+
 .header__mobile {
   padding: 0;
   margin: 0;
   display: none;
 }
 
-.header__mobile_btn_toggle {
-  padding: 0;
-  margin: 22px 18px 0 0;
-  width: 22px;
-  height: 30px;
+.header__mobile_btn_visible {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-image: url(../../images/mobile_menu.svg);
-  background-color: transparent;
-  border: none;
-  outline: none;
-  gap: 4px;
-  cursor: pointer;
-}
-
-.header__mobile_line {
-  width: 18px;
-  border: 2px solid #151515;
 }
 
 .header__link {
@@ -83,6 +99,8 @@
     -webkit-box-align: initial;
         -ms-flex-align: initial;
             align-items: initial;
+    background-color: #f4f4f4;
+    z-index: 990;
   }
   .header__expanded {
     position: fixed;
@@ -91,7 +109,6 @@
     bottom: 0;
     left: 0;
     height: auto;
-    background-color: var(--background-color);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -108,13 +125,12 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
-  .header__mobile_close {
+  .header__mobile-close {
     height: 22px;
-    background-image: url(../../images/mobile_btn-close.svg);
   }
   .header__nav-bar {
     padding: 100px 0 0;

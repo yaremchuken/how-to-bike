@@ -1,0 +1,54 @@
+.theme__dark_background_main {
+  background-color: #333;
+}
+
+.theme__dark_background_footer {
+  background-color: #2f2f2f;
+}
+
+.theme__dark_background_switcher {
+  background-color: #545454;
+}
+
+.theme__dark_color_text-main {
+  color: #fff;
+}
+
+.theme__dark_color_text-secondary {
+  color: #e5e5e5;
+}
+
+.theme__dark_color_text-dark {
+  color: #151515;
+}
+
+.theme__dark_control_background {
+  background-color: #434343;
+}
+
+.theme__dark_control_filter {
+  -webkit-filter: brightness(100);
+          filter: brightness(100);
+}
+
+.theme__dark_footer_copyright {
+  color: #565656;
+}
+
+.theme__dark_footer_icon-sun {
+  background-image: url(../../images/theme_sun_dark.svg);
+}
+
+.theme__dark_footer_icon-moon {
+  background-image: url(../../images/theme_moon_dark.svg);
+}
+
+.theme__dark_mobile_toggle {
+  background-image: url(../../images/mobile_menu_dark.svg);
+}
+
+.theme__dark_mobile_close {
+  height: 22px;
+  background-image: url(../../images/mobile_btn-close_dark.svg);
+}
+/*# sourceMappingURL=theme.css.map */

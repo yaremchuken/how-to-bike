@@ -1,10 +1,18 @@
 @import '../variables/variables.scss';
 
-.surface {
-  --font-secondary: #222;
-  --control: #ebebeb;
-  --control-brightness: 0;
+@mixin control-arrow {
+  padding: 0;
+  margin: 0 auto;
+  content: '';
+  height: 18px;
+  width: 10px;
+  align-self: center;
+  justify-self: center;
+  background-size: contain;
+  filter: brightness(0);
+}
 
+.surface {
   padding: 60px 0 60px 120px;
   margin: 0;
   position: relative;
@@ -26,22 +34,18 @@
     max-width: 460px;
     font-size: 18px;
     line-height: 28px;
-    color: var(--font-secondary);
+    color: $secondary-color;
     opacity: 0.7;
 
     grid-row: 2;
   }
 
-  &__img {
-    &_type {
-      &_main {
-        width: 100%;
-      }
+  &__main-image {
+    width: 100%;
+  }
 
-      &_secondary {
-        width: 100%;
-      }
-    }
+  &__secondary-image {
+    width: 100%;
   }
 
   &__gallery {
@@ -113,7 +117,7 @@
     display: flex;
     border: none;
     outline: none;
-    background-color: var(--control);
+    background-color: #ebebeb;
     border-radius: 9999px;
     cursor: pointer;
     transition: opacity ease-in-out 0.3s;
@@ -121,38 +125,20 @@
     &:hover {
       opacity: 0.6;
     }
+  }
 
-    &_type {
-      &_next::after {
-        padding: 0;
-        margin: 0 auto;
-        content: '';
-        height: 18px;
-        width: 10px;
-        align-self: center;
-        justify-self: center;
-        background-image: url(../../images/surface/gallery-control_next.svg);
-        background-size: contain;
-        filter: brightness(var(--control-brightness));
-      }
+  &__control-next {
+    @include control-arrow;
+    background-image: url(../../images/surface/gallery-control_next.svg);
+  }
 
-      &_previous::after {
-        padding: 0;
-        margin: 0 auto;
-        content: '';
-        height: 18px;
-        width: 10px;
-        align-self: center;
-        justify-self: center;
-        background-image: url(../../images/surface/gallery-control_previous.svg);
-        background-size: contain;
-        filter: brightness(var(--control-brightness));
-      }
-    }
+  &__control-previous {
+    @include control-arrow;
+    background-image: url(../../images/surface/gallery-control_previous.svg);
   }
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: $breakpoint) {
   .surface {
     padding: 0 0 50px 0;
     margin: 0 18px;
@@ -174,12 +160,8 @@
       align-self: center;
     }
 
-    &__img {
-      &_type {
-        &_secondary {
-          display: none;
-        }
-      }
+    &__secondary-image {
+      display: none;
     }
 
     &__gallery {
@@ -210,18 +192,16 @@
     &__control {
       width: 24px;
       height: 24px;
+    }
 
-      &_type {
-        &_next::after {
-          height: 10px;
-          width: 5px;
-        }
+    &__control-next {
+      height: 10px;
+      width: 5px;
+    }
 
-        &_previous::after {
-          height: 10px;
-          width: 5px;
-        }
-      }
+    &__control-previous {
+      height: 10px;
+      width: 5px;
     }
   }
 }
