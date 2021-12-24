@@ -1,6 +1,6 @@
-.legend {
-  --font-secondary: #222;
+@import '../variables/variables.scss';
 
+.legend {
   padding: 20px 0 0 120px;
   margin: 0;
 
@@ -25,7 +25,7 @@
     margin: 0;
     font-size: 18px;
     line-height: 28px;
-    color: var(--font-secondary);
+    color: $secondary-color;
     opacity: 0.7;
 
     grid-column: 1;
@@ -77,21 +77,19 @@
 
     grid-column: 1;
     grid-row: 4;
+  }
 
-    &_type {
-      &_line {
-        padding: 0;
-        margin: 0 0 0 25px;
-        display: inline-block;
-        width: 130px;
-        border: 1px solid #d7d4d4;
-        vertical-align: middle;
-      }
-    }
+  &__vendor-underline {
+    padding: 0;
+    margin: 0 0 0 25px;
+    display: inline-block;
+    width: 130px;
+    border: 1px solid #d7d4d4;
+    vertical-align: middle;
   }
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: $breakpoint) {
   .legend {
     padding: 0 18px 80px 18px;
     display: flex;

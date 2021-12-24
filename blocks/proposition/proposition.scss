@@ -1,8 +1,6 @@
 @import '../variables/variables.scss';
 
 .proposition {
-  --font-secondary: #222;
-
   padding: 120px 120px 60px 120px;
   margin: 0;
   display: flex;
@@ -43,7 +41,7 @@
     margin: 0;
     font-size: 16px;
     line-height: 28px;
-    color: var(--font-secondary);
+    color: $secondary-color;
 
     opacity: 0.7;
   }
@@ -54,7 +52,7 @@
   }
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: $breakpoint) {
   .proposition {
     padding: 0 0 80px 0;
     margin: 0 18px;

@@ -1,6 +1,19 @@
-.header {
-  --background-color: #f4f4f4;
+@import '../variables/variables.scss';
 
+@mixin mobile-menu {
+  padding: 0;
+  margin: 22px 18px 0 0;
+  width: 22px;
+  display: none;
+  flex-direction: column;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.header {
   padding: 0;
   margin: 0 auto;
   min-height: 74px;
@@ -9,31 +22,25 @@
   justify-content: flex-end;
   align-items: center;
 
+  &__mobile-toggle {
+    @include mobile-menu;
+    height: 30px;
+    background-image: url(../../images/mobile_menu_light.svg);
+  }
+
+  &__mobile-close {
+    @include mobile-menu;
+    height: 22px;
+    background-image: url(../../images/mobile_btn-close_light.svg);
+  }
+
   &__mobile {
     padding: 0;
     margin: 0;
     display: none;
 
-    &_btn {
-      &_toggle {
-        padding: 0;
-        margin: 22px 18px 0 0;
-        width: 22px;
-        height: 30px;
-        display: flex;
-        flex-direction: column;
-        background-image: url(../../images/mobile_menu.svg);
-        background-color: transparent;
-        border: none;
-        outline: none;
-        gap: 4px;
-        cursor: pointer;
-      }
-    }
-
-    &_line {
-      width: 18px;
-      border: 2px solid #151515;
+    &_btn_visible {
+      display: flex;
     }
   }
 
@@ -71,6 +78,9 @@
   .header {
     align-items: initial;
 
+    background-color: #f4f4f4;
+    z-index: 990;
+
     &__expanded {
       position: fixed;
       top: 0;
@@ -78,7 +88,6 @@
       bottom: 0;
       left: 0;
       height: auto;
-      background-color: var(--background-color);
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -87,12 +96,13 @@
 
     &__mobile {
       display: flex;
-      justify-content: flex-end;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
 
-      &_close {
-        height: 22px;
-        background-image: url(../../images/mobile_btn-close.svg);
-      }
+    &__mobile-close {
+      height: 22px;
     }
 
     &__nav-bar {

@@ -1,5 +1,4 @@
 .training {
-  --font-secondary: #222;
   padding: 150px 120px 120px 120px;
   margin: 0;
   display: -ms-grid;
@@ -31,7 +30,7 @@
   margin: 0;
   font-size: 18px;
   line-height: 28px;
-  color: var(--font-secondary);
+  color: #222;
   opacity: 0.7;
   -ms-grid-column: 1;
   grid-column: 1;

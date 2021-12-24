@@ -1,8 +1,6 @@
 @import '../variables/variables.scss';
 
 .bycicles {
-  --font-secondary: #222;
-
   padding: 60px 120px;
   margin: 0;
   display: flex;
@@ -39,7 +37,7 @@
     margin: 0;
     font-size: 18px;
     line-height: 28px;
-    color: var(--font-secondary);
+    color: $secondary-color;
     cursor: pointer;
     opacity: 0.7;
 
@@ -76,7 +74,7 @@
     font-size: 11px;
     line-height: 14px;
     font-weight: 600;
-    color: #151515;
+    color: $main-color;
   }
 
   &__displays {
@@ -140,7 +138,7 @@
     cursor: pointer;
 
     &_active {
-      background-color: #151515;
+      background-color: $main-color;
     }
   }
 }
@@ -158,7 +156,7 @@
   }
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: $breakpoint) {
   .bycicles {
     padding: 0 0 80px 0;
     margin: 0 18px;

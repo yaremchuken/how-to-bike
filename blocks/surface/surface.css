@@ -1,7 +1,4 @@
 .surface {
-  --font-secondary: #222;
-  --control: #ebebeb;
-  --control-brightness: 0;
   padding: 60px 0 60px 120px;
   margin: 0;
   position: relative;
@@ -25,17 +22,17 @@
   max-width: 460px;
   font-size: 18px;
   line-height: 28px;
-  color: var(--font-secondary);
+  color: #222;
   opacity: 0.7;
   -ms-grid-row: 2;
   grid-row: 2;
 }
 
-.surface__img_type_main {
+.surface__main-image {
   width: 100%;
 }
 
-.surface__img_type_secondary {
+.surface__secondary-image {
   width: 100%;
 }
 
@@ -116,7 +113,7 @@
   display: flex;
   border: none;
   outline: none;
-  background-color: var(--control);
+  background-color: #ebebeb;
   border-radius: 9999px;
   cursor: pointer;
   -webkit-transition: opacity ease-in-out 0.3s;
@@ -127,7 +124,7 @@
   opacity: 0.6;
 }
 
-.surface__control_type_next::after {
+.surface__control-next {
   padding: 0;
   margin: 0 auto;
   content: '';
@@ -138,13 +135,13 @@
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
-  background-image: url(../../images/surface/gallery-control_next.svg);
   background-size: contain;
-  -webkit-filter: brightness(var(--control-brightness));
-          filter: brightness(var(--control-brightness));
+  -webkit-filter: brightness(0);
+          filter: brightness(0);
+  background-image: url(../../images/surface/gallery-control_next.svg);
 }
 
-.surface__control_type_previous::after {
+.surface__control-previous {
   padding: 0;
   margin: 0 auto;
   content: '';
@@ -155,10 +152,10 @@
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
-  background-image: url(../../images/surface/gallery-control_previous.svg);
   background-size: contain;
-  -webkit-filter: brightness(var(--control-brightness));
-          filter: brightness(var(--control-brightness));
+  -webkit-filter: brightness(0);
+          filter: brightness(0);
+  background-image: url(../../images/surface/gallery-control_previous.svg);
 }
 
 @media screen and (max-width: 1050px) {
@@ -188,7 +185,7 @@
         -ms-grid-row-align: center;
         align-self: center;
   }
-  .surface__img_type_secondary {
+  .surface__secondary-image {
     display: none;
   }
   .surface__gallery {
@@ -220,11 +217,11 @@
     width: 24px;
     height: 24px;
   }
-  .surface__control_type_next::after {
+  .surface__control-next {
     height: 10px;
     width: 5px;
   }
-  .surface__control_type_previous::after {
+  .surface__control-previous {
     height: 10px;
     width: 5px;
   }
