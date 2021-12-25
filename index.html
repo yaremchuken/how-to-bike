@@ -42,10 +42,6 @@
 
       <main class="content">
         <section class="legend">
-          <div class="overlay">
-            <img class="overlay__content" src="./images/overlay.png" alt="Велосипед Cannondale Systemsix Himod" />
-          </div>
-
           <h1 class="legend__title">Шоссе, ТТ и&nbsp;Грэвел</h1>
           <img class="legend__image" src="./images/legend.png" alt="Проезд по грунтовой дороге сквозь лес в сторону гор" />
           <p class="legend__description">
@@ -54,6 +50,10 @@
           </p>
           <button type="button" class="legend__btn-detail">Подробнее</button>
           <p class="legend__vendor-sign">Cannondale Systemsix <span class="legend__vendor-underline"></span></p>
+
+          <div class="overlay">
+            <img class="overlay__content" src="./images/overlay.png" alt="Велосипед Cannondale Systemsix Himod" />
+          </div>
         </section>
 
         <section class="proposition">
@@ -110,13 +110,7 @@
             <option class="bycicles__option" value="tt">ТТ</option>
           </select>
           <ul class="bycicles__displays"></ul>
-
-          <!-- TODO: поменять чтобы количество переключалок зависело от количества картинок -->
-          <ul class="bycicles__switches">
-            <li class="bycicles__switcher bycicles__switcher_active" id="bycicle__switch_0"></li>
-            <li class="bycicles__switcher" id="bycicle__switch_1"></li>
-            <li class="bycicles__switcher" id="bycicle__switch_2"></li>
-          </ul>
+          <ul class="bycicles__switches"></ul>
         </section>
 
         <section class="training" id="training">

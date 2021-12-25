@@ -1,6 +1,7 @@
 .legend {
   padding: 20px 0 0 120px;
   margin: 0;
+  position: relative;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: minmax(284px, 460px) minmax(0, 250px) max-content;

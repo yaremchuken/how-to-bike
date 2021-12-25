@@ -120,6 +120,11 @@ const bikeTypes = [
         name: 'Trek Domane SL-7',
         link: 'https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF',
       },
+      {
+        src: './images/bycicles/cervelo_r5_lamborghini.png',
+        name: 'Cervelo R5 Lamborghini',
+        link: 'https://www.sigmasports.com/item/Cervelo/R5-Lamborghini-Disc-Road-Bike/TZ6P',
+      },
     ],
   },
   {
@@ -170,17 +175,16 @@ document
 
 document.querySelector('.bycicles__type-select').addEventListener('change', () => switchBikesMobile());
 
-document
-  .querySelectorAll('.bycicles__switcher')
-  .forEach((el) => el.addEventListener('click', () => switchBikesMobile(+el.id.replace('bycicle__switch_', ''))));
-
 const bikeTemplate = document.querySelector('#bycicles-template').content.querySelector('.bycicles__card');
 const byciclesDisplays = document.querySelector('.bycicles__displays');
 
 const switchBikes = (type) => {
   const bikes = bikeTypes.filter((t) => t.type === type)[0];
   byciclesDisplays.innerHTML = '';
-  bikes.sources.map((b) => createBikeDisplay(b)).forEach((e) => insertBike(e));
+  bikes.sources
+    .filter((_, idx) => idx < 3)
+    .map((b) => createBikeDisplay(b))
+    .forEach((e) => insertBike(e));
 
   document.querySelectorAll('.bycicles__type').forEach((el) => {
     if (el.id === `bycicles_${type}`) {
@@ -198,12 +202,18 @@ const switchBikesMobile = (idx = 0) => {
   byciclesDisplays.innerHTML = '';
   insertBike(createBikeDisplay(bikes.sources[idx]));
 
-  document.querySelectorAll('.bycicles__switcher').forEach((s) => {
-    if (s.id === `bycicle__switch_${idx}`) {
-      s.classList.add('bycicles__switcher_active');
-    } else {
-      s.classList.remove('bycicles__switcher_active');
+  const switchesContainer = document.querySelector('.bycicles__switches');
+  switchesContainer.innerHTML = '';
+  bikes.sources.forEach((_, i) => {
+    const el = document.createElement('li');
+    el.classList.add('bycicles__switcher');
+    el.id = `bycicle__switch_${i}`;
+    if (i === idx) {
+      el.classList.add('bycicles__switcher_active');
     }
+    el.addEventListener('click', () => switchBikesMobile(i));
+
+    switchesContainer.appendChild(el);
   });
 };
 

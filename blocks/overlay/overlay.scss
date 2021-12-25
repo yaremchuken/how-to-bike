@@ -1,10 +1,14 @@
+@import '../variables/variables.scss';
+
 .overlay {
   padding: 0;
   margin: 0;
 
-  position: sticky;
-  top: 347px;
-  height: calc(100% + 79px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
   display: flex;
   justify-content: center;
@@ -13,9 +17,14 @@
 
   &__content {
     padding: 20px 50px;
-    margin: 0 0 0 260px;
+    margin: 0 0 79px 260px;
+
     width: 340px;
     height: 260px;
+
+    position: sticky;
+    top: 347px;
+
     background-color: #f4f4f4;
     box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.08);
     border-radius: 20px;
@@ -25,9 +34,8 @@
 @media screen and (max-width: $breakpoint) {
   .overlay {
     justify-content: flex-start;
-    position: absolute;
-    top: 386px;
-    left: 18px;
+    top: 312px;
+    left: 20px;
     height: auto;
 
     &__content {
@@ -35,6 +43,8 @@
       margin: 0;
       width: 180px;
       height: 138px;
+      top: 0;
+      position: relative;
     }
   }
 }
