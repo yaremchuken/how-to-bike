@@ -1,0 +1,197 @@
+@import '../variables/variables.scss';
+
+@mixin icon {
+  padding: 0;
+  margin: 0;
+  width: 28px;
+  height: 28px;
+  background-repeat: no-repeat;
+}
+
+.footer {
+  padding: 0;
+  margin: 0;
+  background-color: #efefef;
+
+  transition: all 0.5s;
+
+  &__container {
+    padding: 80px 120px 60px 120px;
+    margin: 0 auto;
+    position: relative;
+    max-width: 1200px;
+  }
+
+  &__form {
+    padding: 0;
+    margin: 50px 0 0;
+    display: flex;
+    position: relative;
+    width: fit-content;
+  }
+
+  &__form-fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+    display: flex;
+  }
+
+  &__form-email {
+    padding: 0 0 0 20px;
+    margin: 0;
+    width: 360px;
+    height: 50px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 28px;
+    color: inherit;
+    border: 1px solid rgba(199, 199, 199, 0.5);
+    border-radius: 4px;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:focus {
+      border: 1px solid #c7c7c7;
+      cursor: default;
+      opacity: 1;
+    }
+  }
+
+  &__form-submit {
+    margin: 0;
+    padding: 0;
+    width: 16px;
+    height: 28px;
+    position: absolute;
+    top: 11px;
+    right: 22px;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__subscribe {
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  &__copyright {
+    padding: 100px 0 0;
+    margin: 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #cfcfcf;
+  }
+
+  &__theme-picker {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 114px;
+    bottom: 68px;
+    display: flex;
+    gap: 22px;
+  }
+
+  &__theme-plug {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 2px;
+    background-color: #24b47e;
+    box-shadow: 0px 0px 0px #ffffff;
+    border-radius: 9999px;
+  }
+
+  &__theme-switch {
+    padding: 0;
+    margin: 0;
+    width: 44px;
+    height: 24px;
+    position: relative;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 9999px;
+    cursor: pointer;
+
+    transition: background-color ease-in-out 0.3s;
+  }
+
+  &__icon-sun {
+    @include icon;
+    background-image: url(../../images/theme_sun_light.svg);
+  }
+
+  &__icon-moon {
+    @include icon;
+    background-image: url(../../images/theme_moon_light.svg);
+  }
+
+  &__logo {
+    padding: 0;
+    margin: 0;
+    display: none;
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    width: 38px;
+    height: 38px;
+    background-image: url(../../images/logo.png);
+  }
+}
+
+@media screen and (max-width: $breakpoint) {
+  .footer {
+    &__container {
+      padding: 60px 0 25px 0;
+      margin: 0 18px;
+    }
+
+    &__form {
+      margin: 37px 0 0;
+      width: 100%;
+    }
+
+    &__form-fieldset {
+      width: 100%;
+    }
+
+    &__form-email {
+      width: 100%;
+    }
+
+    &__logo {
+      display: flex;
+    }
+
+    &__theme-picker {
+      width: fit-content;
+      position: fixed;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      display: none;
+      z-index: 1100;
+
+      &_visible {
+        display: flex;
+      }
+    }
+  }
+}

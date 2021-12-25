@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to bike</title>
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+
+  <body class="body">
+    <div class="page">
+      <header class="header">
+        <div class="header__mobile">
+          <button type="button" class="header__mobile-toggle header__mobile_btn_visible"></button>
+          <button type="button" class="header__mobile-close"></button>
+        </div>
+        <nav class="header__nav-bar">
+          <ul class="header__links">
+            <li>
+              <a class="header__link" href="#surface">Покрытия и градиенты</a>
+            </li>
+            <li>
+              <a class="header__link" href="#bycicles">Велосипеды</a>
+            </li>
+            <li>
+              <a class="header__link" href="#training">Тренировки</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <template id="bycicles-template">
+        <li class="bycicles__card">
+          <a href="#" class="bycicles__link">
+            <figure class="bycicles__display">
+              <img src="#" alt="#" class="bycicles__display_type_img" />
+              <figcaption class="bycicles__display_type_caption">#</figcaption>
+            </figure>
+          </a>
+        </li>
+      </template>
+
+      <main class="content">
+        <section class="legend">
+          <h1 class="legend__title">Шоссе, ТТ и&nbsp;Грэвел</h1>
+          <img class="legend__image" src="./images/legend.png" alt="Проезд по грунтовой дороге сквозь лес в сторону гор" />
+          <p class="legend__description">
+            Триатлонные старты, горные серпантины или грейвел заезды по живописным маршрутам – нужно только определиться с выбором
+            велосипеда и отправиться в путь.
+          </p>
+          <button type="button" class="legend__btn-detail">Подробнее</button>
+          <p class="legend__vendor-sign">Cannondale Systemsix <span class="legend__vendor-underline"></span></p>
+
+          <div class="overlay">
+            <img class="overlay__content" src="./images/overlay.png" alt="Велосипед Cannondale Systemsix Himod" />
+          </div>
+        </section>
+
+        <section class="proposition">
+          <img class="proposition__image" src="./images/proposition.png" alt="Одинокий велосипедист в сельском пейзаже" />
+          <div class="proposition__quote">
+            <p class="proposition__saying">«Катайся много или мало, долго или коротко, как хочешь - но катайся»</p>
+
+            <div class="proposition__author-sign">
+              <p class="proposition__author-name">Эдди Меркс</p>
+              <p class="proposition__author-occupation">Велогонщик</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="surface" id="surface">
+          <h2 class="surface__title">Шоссе</h2>
+          <div class="surface__gallery">
+            <ul class="surface__sliders">
+              <li>
+                <img src="./images/surface/surface_highway_1.png" alt="Шоссе уходящее в закат" class="surface__main-image" />
+                <div class="surface__pulse"><span class="surface__pulse-line surface__pulse-line_type_highway"></span></div>
+              </li>
+              <li>
+                <img src="./images/surface/surface_dirt_1.png" alt="Грунтовая дорога через лес" class="surface__secondary-image" />
+              </li>
+            </ul>
+          </div>
+          <p class="surface__description">
+            На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном
+            пелотоне, но тренироваться можно и самостоятельно.
+          </p>
+          <div class="surface__controls">
+            <button type="button" class="surface__control" id="control-previous">
+              <span class="surface__control-previous"></span>
+            </button>
+            <button type="button" class="surface__control" id="control-next">
+              <span class="surface__control-next"></span>
+            </button>
+          </div>
+        </section>
+
+        <section class="bycicles" id="bycicles">
+          <div class="bycicles__heading">
+            <h2 class="bycicles__title">Велосипеды</h2>
+            <ul class="bycicles__type-list">
+              <li id="bycicles_highway" class="bycicles__type">Шоссе</li>
+              <li id="bycicles_dirt" class="bycicles__type">Грэвел</li>
+              <li id="bycicles_tt" class="bycicles__type">ТТ</li>
+            </ul>
+          </div>
+          <select class="bycicles__type-select">
+            <option class="bycicles__option" selected value="highway">Шоссе</option>
+            <option class="bycicles__option" value="dirt">Грэвел</option>
+            <option class="bycicles__option" value="tt">ТТ</option>
+          </select>
+          <ul class="bycicles__displays"></ul>
+          <ul class="bycicles__switches"></ul>
+        </section>
+
+        <section class="training" id="training">
+          <h2 class="training__title">Тренировки</h2>
+          <img src="./images/training.png" alt="Асфальтированная дорога между деревьев" class="training__image" />
+          <p class="training__description">
+            Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а записать эти тренировки поможет приложение Strava, а
+            также это приложение позволит построить тренировочный план.
+          </p>
+          <ul class="training__links">
+            <li><a href="https://www.strava.com" class="training__link">Strava</a></li>
+            <li><a href="https://www.komoot.com" class="training__link">Komoot</a></li>
+          </ul>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__container">
+          <h2 class="footer__subscribe">Подпишитесь на<br />рассылку —</h2>
+          <form class="footer__form" id="footer__form" name="footer__form">
+            <fieldset class="footer__form-fieldset">
+              <input type="email" name="footer__form-email" class="footer__form-email" placeholder="Ваш e-mail" />
+            </fieldset>
+            <button type="submit" form="footer__form" class="footer__form-submit">ok</button>
+          </form>
+
+          <p class="footer__copyright">&copy; Road Club 2021</p>
+
+          <div class="footer__theme-picker">
+            <div class="footer__icon-sun"></div>
+            <button type="button" class="footer__theme-switch">
+              <span class="footer__theme-plug"></span>
+            </button>
+            <div class="footer__icon-moon"></div>
+          </div>
+        </div>
+        <div class="footer__logo"></div>
+      </footer>
+    </div>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

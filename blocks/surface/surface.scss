@@ -1,0 +1,207 @@
+@import '../variables/variables.scss';
+
+@mixin control-arrow {
+  padding: 0;
+  margin: 0 auto;
+  content: '';
+  height: 18px;
+  width: 10px;
+  align-self: center;
+  justify-self: center;
+  background-size: contain;
+  filter: brightness(0);
+}
+
+.surface {
+  padding: 60px 0 60px 120px;
+  margin: 0;
+  position: relative;
+  display: grid;
+  gap: 50px;
+
+  &__title {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 60px;
+    letter-spacing: -0.5px;
+  }
+
+  &__description {
+    padding: 0 0 30px 0;
+    margin: 0;
+    max-width: 460px;
+    font-size: 18px;
+    line-height: 28px;
+    color: $secondary-color;
+    opacity: 0.7;
+
+    grid-row: 2;
+  }
+
+  &__main-image {
+    width: 100%;
+  }
+
+  &__secondary-image {
+    width: 100%;
+  }
+
+  &__gallery {
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+
+  &__pulse {
+    padding: 0;
+    margin: 0;
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    bottom: 16px;
+    display: flex;
+    background-image: url(../../images/surface/gallery-pulse.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+  }
+
+  &__pulse-line {
+    padding: 0;
+    margin: 0 0 0 16px;
+    width: 50px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    &_type {
+      &_highway {
+        background-image: url(../../images/surface/gallery-pulse_highway.svg);
+      }
+
+      &_dirt {
+        background-image: url(../../images/surface/gallery-pulse_dirt.svg);
+      }
+
+      &_tt {
+        background-image: url(../../images/surface/gallery-pulse_tt.svg);
+      }
+    }
+  }
+
+  &__sliders {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+    position: relative;
+  }
+
+  &__controls {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+  }
+
+  &__control {
+    padding: 0;
+    margin: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border: none;
+    outline: none;
+    background-color: #ebebeb;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: opacity ease-in-out 0.3s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__control-next {
+    @include control-arrow;
+    background-image: url(../../images/surface/gallery-control_next.svg);
+  }
+
+  &__control-previous {
+    @include control-arrow;
+    background-image: url(../../images/surface/gallery-control_previous.svg);
+  }
+}
+
+@media screen and (max-width: $breakpoint) {
+  .surface {
+    padding: 0 0 50px 0;
+    margin: 0 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    border-top: $border-top;
+
+    &__title {
+      padding: 38px 0 0;
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    &__description {
+      max-width: none;
+      font-size: 12px;
+      line-height: 18px;
+      align-self: center;
+    }
+
+    &__secondary-image {
+      display: none;
+    }
+
+    &__gallery {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__pulse {
+      width: 70px;
+      height: 28px;
+    }
+
+    &__pulse-line {
+      margin: 0 0 0 10px;
+      width: 35px;
+    }
+    &__sliders {
+      gap: 0;
+    }
+
+    &__controls {
+      position: absolute;
+      top: 47px;
+      right: 0;
+      gap: 10px;
+    }
+
+    &__control {
+      width: 24px;
+      height: 24px;
+    }
+
+    &__control-next {
+      height: 10px;
+      width: 5px;
+    }
+
+    &__control-previous {
+      height: 10px;
+      width: 5px;
+    }
+  }
+}

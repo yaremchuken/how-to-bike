@@ -1,0 +1,66 @@
+.theme {
+  &__dark {
+    &_background {
+      &_main {
+        background-color: #333;
+      }
+
+      &_footer {
+        background-color: #2f2f2f;
+      }
+
+      &_switcher {
+        background-color: #545454;
+      }
+    }
+
+    &_color {
+      &_text-main {
+        color: #fff;
+      }
+
+      &_text-secondary {
+        color: #e5e5e5;
+      }
+
+      &_text-dark {
+        color: #151515;
+      }
+    }
+
+    &_control {
+      &_background {
+        background-color: #434343;
+      }
+
+      &_filter {
+        filter: brightness(100);
+      }
+    }
+
+    &_footer {
+      &_copyright {
+        color: #565656;
+      }
+
+      &_icon-sun {
+        background-image: url(../../images/theme_sun_dark.svg);
+      }
+
+      &_icon-moon {
+        background-image: url(../../images/theme_moon_dark.svg);
+      }
+    }
+
+    &_mobile {
+      &_toggle {
+        background-image: url(../../images/mobile_menu_dark.svg);
+      }
+
+      &_close {
+        height: 22px;
+        background-image: url(../../images/mobile_btn-close_dark.svg);
+      }
+    }
+  }
+}
