@@ -1,3 +1,5 @@
+const breakpoint = 1050;
+
 /**
  * Мобильное меню.
  */
@@ -262,6 +264,8 @@ document.querySelector('.footer__theme-plug').style.left = '2px';
 let isLightTheme = true;
 
 const switchTheme = () => {
+  isLightTheme = !isLightTheme;
+
   document.querySelector('.body').classList.toggle('theme__dark_background_main');
   document.querySelector('.body').classList.toggle('theme__dark_color_text-main');
 
@@ -283,7 +287,8 @@ const switchTheme = () => {
   document.querySelector('.bycicles__type-select').classList.toggle('theme__dark_color_text-main');
   document.querySelector('.bycicles__type-select').classList.toggle('theme__dark_background_main');
   document.querySelectorAll('.bycicles__option').forEach((el) => el.classList.toggle('theme__dark_color_text-main'));
-  document.querySelectorAll('.bycicles__displays').forEach((el) => el.classList.toggle('theme__dark_color_text-dark'));
+
+  byciclesLinksColor();
 
   document.querySelector('.training__description').classList.toggle('theme__dark_color_text-secondary');
 
@@ -294,7 +299,6 @@ const switchTheme = () => {
   document.querySelector('.footer__icon-sun').classList.toggle('theme__dark_footer_icon-sun');
   document.querySelector('.footer__icon-moon').classList.toggle('theme__dark_footer_icon-moon');
 
-  isLightTheme = !isLightTheme;
   const plugStyle = document.querySelector('.footer__theme-plug').style;
   if (isLightTheme) {
     plugStyle.left = '2px';
@@ -302,6 +306,22 @@ const switchTheme = () => {
   } else {
     plugStyle.right = '2px';
     plugStyle.left = null;
+  }
+};
+
+const byciclesLinksColor = () => {
+  const displays = document.querySelectorAll('.bycicles__displays');
+  if (isLightTheme) {
+    displays.forEach((el) => el.classList.add('theme__dark_color_text-dark'));
+    displays.forEach((el) => el.classList.remove('theme__dark_color_text-main'));
+  } else {
+    if (window.innerWidth <= breakpoint) {
+      displays.forEach((el) => el.classList.add('theme__dark_color_text-dark'));
+      displays.forEach((el) => el.classList.remove('theme__dark_color_text-main'));
+    } else {
+      displays.forEach((el) => el.classList.remove('theme__dark_color_text-dark'));
+      displays.forEach((el) => el.classList.add('theme__dark_color_text-main'));
+    }
   }
 };
 
@@ -337,7 +357,6 @@ hideOkBtn();
  */
 
 let size = 'desktop';
-const breakpoint = 1050;
 
 window.onresize = () => {
   if (size === 'desktop' && window.innerWidth <= breakpoint) {
@@ -349,6 +368,7 @@ window.onresize = () => {
     size = 'desktop';
   }
   closeMobileMenu();
+  byciclesLinksColor();
 };
 
 if (window.innerWidth <= breakpoint) {
